@@ -50,8 +50,8 @@ const RealityCheck = () => {
                 <ul className="space-y-4">
                   {[
                     "Plan B in der Tasche: Direkter Einstieg in Unternehmen möglich.",
-                    "Schul-Booster: Wirtschaftskompetenz macht dich auch als Lehrer für Projektwochen oder Schulmanagement attraktiv.",
-                    "Zusatzqualifikation: Hebe dich von anderen Bewerbern ab."
+                    "Schul-Booster: Wirtschaftskompetenz macht dich auch als Lehrer:in für Projektwochen oder Schulmanagement attraktiv.",
+                    "Zusatzqualifikation: Hebe dich von anderen Bewerber:innen ab."
                   ].map((item, index) => (
                     <motion.li 
                       key={index}

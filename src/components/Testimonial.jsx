@@ -31,7 +31,7 @@ const Testimonial = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-white text-center mb-20"
         >
-          Was unsere Absolventen sagen
+          Was unsere Absolvent:innen sagen
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">

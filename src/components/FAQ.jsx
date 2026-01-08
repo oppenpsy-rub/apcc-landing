@@ -45,15 +45,27 @@ const FAQ = () => {
   const faqs = [
     {
       q: "Dauert mein Studium dadurch länger?",
-      a: "Nein. Im 1-Fach-Master ist das Profil vollständig in die regulären 100 CP integriert (über Wahl- und Ergänzungsbereiche). Du studierst in Regelstudienzeit. Im 2-Fach-Master nutzt du die vorlesungsfreie Zeit für das Praktikum, sodass auch hier keine Verzögerung entstehen muss."
+      a: (
+        <>
+          <strong>Es kommt auf deinen Studiengang an.</strong>
+          <br /><br />
+          <strong>Im 1-Fach-Master:</strong> Nein. Hier ist das Profil vollständig in die 100 CP integriert. Du bleibst in der Regelstudienzeit.
+          <br /><br />
+          <strong>Im 2-Fach-Master & M.Ed.:</strong> Ja, rechne realistisch mit <strong>1 bis 2 Zusatzsemestern</strong>. Da das Zertifikat eine umfangreiche Zusatzqualifikation (ca. 35-40 CP) ist, erbringst du diese Leistungen zusätzlich.
+          <div className="mt-6 p-4 bg-rub-blue/5 border-l-4 border-rub-green rounded-r-lg">
+            <span className="font-bold text-rub-blue block mb-1">Unser Tipp:</span>
+            <span className="text-gray-700">Sieh es als Investment. Du nimmst dir bewusst Zeit, um deinen Lebenslauf wettbewerbsfähig zu machen – ähnlich wertvoll wie ein Auslandsjahr.</span>
+          </div>
+        </>
+      )
     },
     {
       q: "Wird mir ein Job garantiert?",
-      a: "Seriöse Antwort: Nein – das kann keine Uni. Aber: Das Zertifikat löst das Hauptproblem von Geisteswissenschaftlern (fehlende Praxis). Du hast durch das Projektpraktikum oft schon den Fuß in der Tür und hebst dich durch BWL-Kenntnisse massiv von Mitbewerbern ab."
+      a: "Seriöse Antwort: Nein – das kann keine Uni. Aber: Das Zertifikat löst das Hauptproblem von Geisteswissenschaftler:innen (fehlende Praxis). Du hast durch das Projektpraktikum oft schon den Fuß in der Tür und hebst dich durch BWL-Kenntnisse massiv von Mitbewerber:innen ab."
     },
     {
       q: "Für wen ist APCC geeignet?",
-      a: "Für alle Romanisten, die mehr Optionen als nur 'Schule' wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als 'Plan B'-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
+      a: "Für alle Romanist:innen, die mehr Optionen als nur 'Schule' wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als 'Plan B'-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
     },
     {
       q: "Muss ich die Prüfungsordnung wechseln?",

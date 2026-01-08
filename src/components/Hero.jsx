@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -20,9 +21,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-rub-green/20 border border-rub-green text-rub-green font-semibold text-sm mb-6 backdrop-blur-sm">
-            Neu an der RUB
-          </span>
+          <div className="flex justify-center mb-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+            >
+              <Sparkles size={16} className="text-rub-green" />
+              <span className="text-white text-xs font-medium uppercase tracking-widest">Neu an der RUB</span>
+            </motion.div>
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Dein Ticket in <br /> die Wirtschaft.
           </h1>
