@@ -11,7 +11,7 @@ const Hero = () => {
           alt="Students working"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-rub-blue/90 to-rub-blue/70 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/90 via-rub-blue/40 to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center text-white">
