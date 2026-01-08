@@ -17,9 +17,9 @@ const testimonials = [
   },
   {
     image: "Testimonial_3.png",
-    quote: "Nach dem Referendariat fiel ich in ein Loch: Keine Planstelle. APCC war mein Rettungsanker. Die BWL-Skills gaben mir den Mut für den Neustart. Heute leite ich das Recruiting für einen italienischen Modekonzern.",
+    quote: "Referendariat bestanden, aber keine Planstelle bekommen – das ist leider Realität. Statt auf eine Stelle zu warten, studiere ich jetzt das APCC-Zertifikat oben drauf. Es ist meine Brücke in die Wirtschaft: Zu meinen didaktischen Skills hole ich mir jetzt das Management-Wissen.",
     name: "Mario R.",
-    title: "Absolvent (2. Staatsexamen & APCC)"
+    title: "Absolvent (2. Staatsexamen) & APCC-Teilnehmer"
   }
 ];
 
