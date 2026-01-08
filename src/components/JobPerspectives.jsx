@@ -57,7 +57,7 @@ const JobPerspectives = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 + 0.3 }}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-rub-green"
+              className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-rub-green"
             >
               <div className="w-14 h-14 bg-rub-blue/5 rounded-full flex items-center justify-center mb-6 mx-auto text-rub-blue">
                 <item.icon size={28} />

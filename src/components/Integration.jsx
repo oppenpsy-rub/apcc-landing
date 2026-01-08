@@ -17,12 +17,12 @@ const Integration = () => {
         </h2>
 
         <div className="flex justify-center mb-8">
-          <div className="bg-white p-1 rounded-full shadow-sm inline-flex">
+          <div className="bg-white p-1 rounded-full shadow-sm inline-flex flex-wrap justify-center gap-1">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-rub-blue text-white shadow-md'
                     : 'text-gray-500 hover:text-rub-blue'

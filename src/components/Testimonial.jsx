@@ -82,7 +82,7 @@ const Testimonial = () => {
         </motion.h2>
 
         <div 
-          className="relative max-w-2xl mx-auto min-h-[400px]"
+          className="relative max-w-2xl mx-auto min-h-[300px] md:min-h-[400px]"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >

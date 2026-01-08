@@ -4,7 +4,7 @@ import { Briefcase, BookOpen, Rocket } from 'lucide-react';
 
 const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = false, delay }) => (
   <motion.div 
-    className={`p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl relative overflow-hidden ${
+    className={`p-6 md:p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl relative overflow-hidden ${
       highlight 
         ? 'bg-white border-rub-green shadow-lg ring-1 ring-rub-green/20' 
         : blueBorder

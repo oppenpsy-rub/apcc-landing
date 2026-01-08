@@ -16,7 +16,7 @@ const ProblemSolution = () => {
             <img 
               src="Arbeitswelt.png" 
               alt="Confident Student" 
-              className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+              className="rounded-2xl shadow-2xl w-full object-cover h-[300px] md:h-[500px]"
             />
           </motion.div>
           <motion.div 

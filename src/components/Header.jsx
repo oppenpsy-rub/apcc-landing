@@ -18,13 +18,13 @@ const Header = ({ onOpenBooking }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-rub-blue' : 'text-white'}`}>
-          RUB <span className="font-normal">| Romanisches Seminar</span>
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <div className={`text-lg md:text-xl font-bold tracking-tight ${isScrolled ? 'text-rub-blue' : 'text-white'}`}>
+          RUB <span className="font-normal hidden sm:inline">| Romanisches Seminar</span>
         </div>
         <button 
           onClick={onOpenBooking}
-          className="bg-rub-green hover:bg-opacity-90 text-white font-medium py-2 px-6 rounded-full transition-all shadow-lg hover:shadow-xl"
+          className="bg-rub-green hover:bg-opacity-90 text-white font-medium py-2 px-4 md:px-6 text-sm md:text-base rounded-full transition-all shadow-lg hover:shadow-xl"
         >
           Beratungstermin
         </button>
