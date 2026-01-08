@@ -2,12 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, BookOpen, Rocket } from 'lucide-react';
 
-const Card = ({ icon: Icon, title, description, highlight = false, delay }) => (
+const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = false, delay }) => (
   <motion.div 
     className={`p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl relative overflow-hidden ${
       highlight 
         ? 'bg-white border-rub-green shadow-lg ring-1 ring-rub-green/20' 
-        : 'bg-white border-gray-100'
+        : blueBorder
+          ? 'bg-white border-rub-blue shadow-md'
+          : 'bg-white border-gray-100'
     }`}
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -46,12 +48,14 @@ const ThreePillars = () => {
             title="Organisationskultur"
             description="Verstehe, wie Unternehmen 'ticken'. Lerne Grundlagen der Arbeitspsychologie und des Personalwesens."
             delay={0}
+            blueBorder={true}
           />
           <Card 
             icon={BookOpen}
             title="Kultur- & Sprachanalyse"
             description="Nutze deine Analysefähigkeit für Corporate Storytelling, Diskursanalyse und interkulturelle Verhandlung."
             delay={0.2}
+            blueBorder={true}
           />
           <Card 
             icon={Rocket}

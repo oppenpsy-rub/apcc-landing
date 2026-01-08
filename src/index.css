@@ -6,4 +6,7 @@
   body {
     @apply text-rub-darkText bg-white;
   }
+  h1, h2, h3 {
+    @apply font-serif;
+  }
 }
