@@ -33,7 +33,7 @@ const Hero = () => {
             </motion.div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight drop-shadow-lg">
-            Kultur verstehen. <br /> Unternehmen gestalten.
+            Kultur verstehen <br /> Unternehmen gestalten
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
             Bringe deine romanistische Expertise in die Wirtschaft ein: <br className="hidden md:block" />
