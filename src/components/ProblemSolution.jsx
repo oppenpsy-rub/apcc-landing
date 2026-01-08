@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ProblemSolution = () => {
   return (
-    <section className="py-20 bg-rub-lightGray">
+    <section id="problem-solution" className="py-20 bg-rub-lightGray">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div 

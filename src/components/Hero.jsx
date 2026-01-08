@@ -30,7 +30,10 @@ const Hero = () => {
             Romanistik studieren. Karriere machen. <br />
             Das neue Profilzertifikat APCC.
           </p>
-          <button className="bg-rub-green hover:bg-[#7c990e] text-white text-lg font-semibold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl">
+          <button 
+            onClick={() => document.getElementById('problem-solution').scrollIntoView({ behavior: 'smooth' })}
+            className="bg-rub-green hover:bg-[#7c990e] text-white text-lg font-semibold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl"
+          >
             Mehr erfahren
           </button>
         </motion.div>
