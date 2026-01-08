@@ -82,7 +82,7 @@ const RealityCheck = () => {
                     onClick={() => setIsZoomed(true)}
                   >
                     <motion.img 
-                      src="Bedarfsprognosen.png" 
+                      src="/Bedarfsprognosen.png" 
                       alt="Bedarfsprognosen Chart" 
                       className="w-full h-auto rounded-lg shadow-sm transition-transform duration-500 group-hover:scale-105"
                       initial={{ opacity: 0, scale: 0.95 }}

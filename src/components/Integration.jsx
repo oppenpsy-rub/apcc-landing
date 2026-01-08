@@ -50,7 +50,7 @@ const Integration = () => {
                     <span className="font-bold text-rub-green">Voll integriert.</span> Nutze deinen Ergänzungsbereich (Modul B) und Wahlbereich. Du machst keine Extra-CP.
                   </p>
                   <img 
-                    src="/integration-1-fach.png" 
+                    src="integration-1-fach.png" 
                     alt="Integration 1-Fach Master" 
                     className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100"
                   />
