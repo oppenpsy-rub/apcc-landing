@@ -33,11 +33,11 @@ const Hero = () => {
             </motion.div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Dein Ticket in <br /> die Wirtschaft.
+            Dein Ticket in <br /> die Wirtschaft
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto font-light">
-            Romanistik studieren. Karriere machen. <br />
-            Das neue Profilzertifikat APCC.
+            Romanistik studieren · Karriere machen · <br />
+            Das neue Profilzertifikat APCC
           </p>
           <button 
             onClick={() => document.getElementById('problem-solution').scrollIntoView({ behavior: 'smooth' })}

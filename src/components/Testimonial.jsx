@@ -76,7 +76,7 @@ const Testimonial = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          className="text-3xl md:text-4xl font-bold text-white text-center mb-24"
         >
           Was unsere Absolvent:innen sagen
         </motion.h2>
@@ -98,7 +98,7 @@ const Testimonial = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }
               }}
-              className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative pt-16 flex flex-col items-center text-center w-full"
+              className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative pt-20 flex flex-col items-center text-center w-full"
             >
               {/* Floating Avatar */}
               <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full border-4 border-rub-green overflow-hidden shadow-lg bg-gray-200 z-20">
@@ -112,7 +112,7 @@ const Testimonial = () => {
               {/* Quote Icon */}
               <Quote size={48} className="absolute top-6 right-6 text-rub-blue/10" />
 
-              <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic relative z-10">
+              <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic relative z-10 mt-4">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
               
