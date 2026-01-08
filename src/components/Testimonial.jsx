@@ -5,7 +5,7 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     image: "Testimonial.png",
-    quote: "Dank APCC habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich im Marketing eines globalen Konzerns in Mailand.",
+    quote: "Dank APCC habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich in der Unternehmenskommunikation eines globalen Konzerns in Mailand.",
     name: "Marie S.",
     title: "Absolventin (M.A. Romanistik Italienisch)"
   },
