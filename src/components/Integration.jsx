@@ -61,7 +61,7 @@ const Integration = () => {
                     <span className="font-bold text-rub-green">Das Exzellenz-Zertifikat.</span> Nutze den Wahlbereich und absolviere das Praktikum als wertvolle Zusatzqualifikation.
                   </p>
                   <img 
-                    src="/integration-2-fach.png" 
+                    src="integration-2-fach.png" 
                     alt="Integration 2-Fach Master" 
                     className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100"
                   />
