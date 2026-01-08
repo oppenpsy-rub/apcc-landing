@@ -14,7 +14,7 @@ const ProblemSolution = () => {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" 
+              src="Arbeitswelt.png" 
               alt="Confident Student" 
               className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
             />

@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80"
+          src="Titelbild.png"
           alt="Students working"
           className="w-full h-full object-cover"
         />

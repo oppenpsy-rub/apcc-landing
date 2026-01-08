@@ -24,7 +24,7 @@ const Testimonial = () => {
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-gray-300 mb-4 overflow-hidden border-2 border-rub-green">
                <img 
-                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80" 
+                 src="Testimonial.png" 
                  alt="Marie S." 
                  className="w-full h-full object-cover"
                />

@@ -35,7 +35,7 @@ const RealityCheck = () => {
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-800 mb-6 leading-tight">
-                  Lehrerbedarfsprognose NRW: <br/>
+                  Lehrkräftebedarfsprognose NRW: <br/>
                   <span className="text-rub-blue">Bereite dich vor.</span>
                 </h3>
 
@@ -82,7 +82,7 @@ const RealityCheck = () => {
                     onClick={() => setIsZoomed(true)}
                   >
                     <motion.img 
-                      src="/Bedarfsprognosen.png" 
+                      src="Bedarfsprognosen.png" 
                       alt="Bedarfsprognosen Chart" 
                       className="w-full h-auto rounded-lg shadow-sm transition-transform duration-500 group-hover:scale-105"
                       initial={{ opacity: 0, scale: 0.95 }}
