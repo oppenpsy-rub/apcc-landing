@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
+import JobPerspectives from './components/JobPerspectives';
 import RealityCheck from './components/RealityCheck';
 import ThreePillars from './components/ThreePillars';
 import Integration from './components/Integration';
