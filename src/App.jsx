@@ -22,6 +22,7 @@ function App() {
       <main>
         <Hero onOpenBooking={openBooking} />
         <ProblemSolution />
+        <JobPerspectives />
         <RealityCheck />
         <ThreePillars />
         <Integration />

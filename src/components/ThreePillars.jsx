@@ -43,20 +43,20 @@ const ThreePillars = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card 
             icon={Briefcase}
-            title="Corporate Culture"
-            description="Wirtschaftswissen aus BWL, Marketing & HR. (Importbereich, ca. 10-15 CP)"
+            title="Organisationskultur"
+            description="Verstehe, wie Unternehmen 'ticken'. Lerne Grundlagen der Arbeitspsychologie und des Personalwesens."
             delay={0}
           />
           <Card 
             icon={BookOpen}
-            title="Angewandte Philologie"
-            description="Fachseminare wie 'Interkulturelle Verhandlung' & 'Corporate Storytelling'. (Wahlbereich, 10 CP)"
+            title="Kultur- & Sprachanalyse"
+            description="Nutze deine Analysefähigkeit für Corporate Storytelling, Diskursanalyse und interkulturelle Verhandlung."
             delay={0.2}
           />
           <Card 
             icon={Rocket}
             title="Praxis & Transfer"
-            description="Unternehmenspraktikum & Masterarbeit als reales Consulting-Projekt. (Praxisphase, 15 CP)"
+            description="Wende philologische Methoden auf reale Unternehmensfragen an. (Praxisphase, 15 CP)"
             highlight={true}
             delay={0.4}
           />

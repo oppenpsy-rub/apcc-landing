@@ -8,11 +8,11 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="Titelbild.png"
-          alt="Students working"
+          src="diversity_1.png"
+          alt="Students working collaboratively"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/90 via-rub-blue/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/90 via-rub-blue/60 to-rub-blue/20" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center text-white">
@@ -32,12 +32,12 @@ const Hero = () => {
               <span className="text-white text-xs font-medium uppercase tracking-widest">Neu an der RUB</span>
             </motion.div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Dein Ticket in <br /> die Wirtschaft
+          <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight">
+            Kultur verstehen. <br /> Unternehmen gestalten.
           </h1>
-          <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto font-light">
-            Romanistik studieren · Karriere machen · <br />
-            Das neue Profilzertifikat APCC
+          <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-3xl mx-auto font-light leading-relaxed">
+            Bringe deine romanistische Expertise in die Wirtschaft ein: <br className="hidden md:block" />
+            Als Expert:in für Kommunikation, Interkulturalität und Organisationskultur.
           </p>
           <button 
             onClick={() => document.getElementById('problem-solution').scrollIntoView({ behavior: 'smooth' })}
