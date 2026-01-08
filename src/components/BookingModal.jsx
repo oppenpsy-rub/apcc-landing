@@ -1,16 +1,44 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar as CalendarIcon, Clock, CheckCircle } from 'lucide-react';
+import { X, Calendar as CalendarIcon, Clock, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const BookingModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [currentMonth, setCurrentMonth] = useState(new Date(2026, 0)); // Start at Jan 2026
 
-  // Mock calendar data for "Next Month"
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
-  const dates = Array.from({ length: 31 }, (_, i) => i + 1);
-  const startDayOffset = 3; // Starts on Thursday for example
+  
+  const getDaysInMonth = (date) => {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  };
+
+  const getFirstDayOfMonth = (date) => {
+    // JS getDay(): 0=Sun, 1=Mon, ... 6=Sat
+    // We want: 0=Mon, ... 6=Sun
+    const day = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    return day === 0 ? 6 : day - 1;
+  };
+
+  const monthNames = [
+    'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
+  ];
+
+  const handlePrevMonth = () => {
+    setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1));
+    setSelectedDate(null);
+  };
+
+  const handleNextMonth = () => {
+    setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1));
+    setSelectedDate(null);
+  };
+
+  const numDays = getDaysInMonth(currentMonth);
+  const startOffset = getFirstDayOfMonth(currentMonth);
+  const dates = Array.from({ length: numDays }, (_, i) => i + 1);
 
   const timeSlots = [
     '09:00', '10:00', '11:00', '13:00', '14:00', '15:30'
@@ -39,6 +67,7 @@ const BookingModal = ({ isOpen, onClose }) => {
       setStep(1);
       setSelectedDate(null);
       setSelectedTime(null);
+      setCurrentMonth(new Date(2026, 0)); // Reset to Jan 2026
     }, 300);
   }
 
@@ -80,9 +109,28 @@ const BookingModal = ({ isOpen, onClose }) => {
                   {/* Calendar View */}
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="font-semibold text-gray-700">Januar 2026</span>
-                      <CalendarIcon size={18} className="text-rub-green" />
+                      <button 
+                        onClick={handlePrevMonth}
+                        className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                      >
+                        <ChevronLeft size={20} className="text-gray-600" />
+                      </button>
+                      
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-gray-700">
+                          {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
+                        </span>
+                        <CalendarIcon size={16} className="text-rub-green" />
+                      </div>
+
+                      <button 
+                        onClick={handleNextMonth}
+                        className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                      >
+                        <ChevronRight size={20} className="text-gray-600" />
+                      </button>
                     </div>
+                    
                     <div className="grid grid-cols-7 gap-1 mb-2">
                       {days.map(day => (
                         <div key={day} className="text-center text-xs text-gray-400 font-medium py-1">
@@ -91,7 +139,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                       ))}
                     </div>
                     <div className="grid grid-cols-7 gap-1">
-                      {Array.from({ length: startDayOffset }).map((_, i) => (
+                      {Array.from({ length: startOffset }).map((_, i) => (
                         <div key={`empty-${i}`} />
                       ))}
                       {dates.map(date => (
@@ -166,7 +214,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                   </motion.div>
                   <h3 className="text-2xl font-bold text-rub-blue mb-2">Termin gebucht!</h3>
                   <p className="text-gray-600 mb-8">
-                    Wir haben dir eine Bestätigung an deine E-Mail gesendet. Wir freuen uns auf das Gespräch am {selectedDate}. Januar um {selectedTime} Uhr.
+                    Wir haben dir eine Bestätigung an deine E-Mail gesendet. Wir freuen uns auf das Gespräch am {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr.
                   </p>
                   <button
                     onClick={reset}
