@@ -77,7 +77,7 @@ const ThreePillars = () => {
           <img 
             src="diversity_4.png" 
             alt="Studierende im Austausch" 
-            className="w-full h-[300px] md:h-[400px] object-cover"
+            className="w-full h-auto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end p-8">
             <p className="text-white text-lg md:text-xl font-medium max-w-2xl">

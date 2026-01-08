@@ -81,7 +81,7 @@ const JobPerspectives = () => {
           <img 
             src="diversity_2.png" 
             alt="Multikulturelles Team bei der Arbeit" 
-            className="w-full h-[400px] object-cover"
+            className="w-full h-auto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end justify-center pb-10">
             <p className="text-white text-xl md:text-2xl font-serif italic text-center px-4 max-w-3xl">
