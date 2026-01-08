@@ -49,7 +49,7 @@ const JobPerspectives = () => {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {perspectives.map((item, index) => (
             <motion.div
               key={index}
@@ -69,6 +69,26 @@ const JobPerspectives = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Added Image Section */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative rounded-2xl overflow-hidden shadow-2xl"
+        >
+          <img 
+            src="diversity_2.png" 
+            alt="Multikulturelles Team bei der Arbeit" 
+            className="w-full h-[400px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end justify-center pb-10">
+            <p className="text-white text-xl md:text-2xl font-serif italic text-center px-4 max-w-3xl">
+              "Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg."
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
