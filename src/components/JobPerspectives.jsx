@@ -45,7 +45,7 @@ const JobPerspectives = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-rub-darkText/80 leading-relaxed"
           >
-            Unternehmen suchen keine zweiten BWLer. Sie suchen dich, weil du zwischen den Zeilen lesen und Kulturen übersetzen kannst.
+            Unternehmen suchen nicht nur BWLer. Sie suchen auch DICH, weil du zwischen den Zeilen lesen und Kulturen übersetzen kannst.
           </motion.p>
         </div>
 

@@ -30,8 +30,7 @@ const ProblemSolution = () => {
               Schluss mit "Was macht man damit?"
             </h2>
             <p className="text-lg text-rub-darkText leading-relaxed mb-6">
-              Die Wirtschaft sucht Talente, die Frankreich, Italien und Spanien verstehen. 
-              Mit dem APCC-Zertifikat integrierst du BWL-Wissen und ein Unternehmenspraktikum direkt in deinen Master.
+              Wer international erfolgreich sein will, muss mehr verstehen als nur die Sprache. Das APCC-Zertifikat macht dich zur kommunikativen Schnittstelle: Du verbindest dein Romanistik-Studium mit Einblicken in Unternehmensstrukturen und sammelst relevante Praxiserfahrung.
             </p>
             <div className="flex gap-4">
               <div className="flex items-center gap-2">

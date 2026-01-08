@@ -61,6 +61,26 @@ const ThreePillars = () => {
             delay={0.4}
           />
         </div>
+
+        {/* Added diversity_3 image */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 rounded-2xl overflow-hidden shadow-2xl relative"
+        >
+          <img 
+            src="diversity_3.png" 
+            alt="Studierende im Austausch" 
+            className="w-full h-[300px] md:h-[400px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end p-8">
+            <p className="text-white text-lg md:text-xl font-medium max-w-2xl">
+              Erweitere deinen Horizont – akademisch und kulturell.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
