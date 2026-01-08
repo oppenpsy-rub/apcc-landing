@@ -62,7 +62,7 @@ const ThreePillars = () => {
           />
         </div>
 
-        {/* Added diversity_3 image */}
+        {/* Added diversity_4 image */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ const ThreePillars = () => {
           className="mt-16 rounded-2xl overflow-hidden shadow-2xl relative"
         >
           <img 
-            src="diversity_3.png" 
+            src="diversity_4.png" 
             alt="Studierende im Austausch" 
             className="w-full h-[300px] md:h-[400px] object-cover"
           />
