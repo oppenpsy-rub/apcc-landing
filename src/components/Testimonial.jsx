@@ -14,6 +14,12 @@ const testimonials = [
     quote: "Ich liebe die französische Sprache, aber ins Lehramt wollte ich nie. Das APCC-Profil war der Gamechanger: Mein Praktikum bei einem Logistik-Riesen in Paris war der direkte Türöffner in den Job.",
     name: "Jonas B.",
     title: "Absolvent (M.A. Romanistik Französisch)"
+  },
+  {
+    image: "Testimonial_3.png",
+    quote: "Nach dem Referendariat fiel ich in ein Loch: Keine Planstelle. APCC war mein Rettungsanker. Die BWL-Skills gaben mir den Mut für den Neustart. Heute leite ich das Recruiting für einen italienischen Modekonzern.",
+    name: "Mario R.",
+    title: "Absolvent (2. Staatsexamen & APCC)"
   }
 ];
 
@@ -34,7 +40,7 @@ const Testimonial = () => {
           Was unsere Absolvent:innen sagen
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
@@ -42,7 +48,7 @@ const Testimonial = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-2xl shadow-xl p-8 relative mt-12 pt-16 flex flex-col items-center text-center"
+              className="bg-white rounded-2xl shadow-xl p-8 relative mt-12 pt-16 flex flex-col items-center text-center h-full"
             >
               {/* Floating Avatar */}
               <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full border-4 border-rub-green overflow-hidden shadow-lg bg-gray-200">
@@ -54,9 +60,9 @@ const Testimonial = () => {
               </div>
 
               {/* Quote Icon */}
-              <Quote size={48} className="absolute top-6 right-6 text-rub-blue/10" />
+              <Quote size={40} className="absolute top-6 right-6 text-rub-blue/10" />
 
-              <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic relative z-10">
+              <blockquote className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 italic relative z-10">
                 "{t.quote}"
               </blockquote>
               
