@@ -65,7 +65,7 @@ const FAQ = () => {
     },
     {
       q: "Für wen ist APCC geeignet?",
-      a: "Für alle Romanist:innen, die mehr Optionen als nur 'Schule' wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als 'Plan B'-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
+      a: "Für alle Romanist:innen, die mehr Optionen als nur Schule wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als Plan B-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
     },
     {
       q: "Muss ich die Prüfungsordnung wechseln?",
