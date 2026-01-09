@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, AlertCircle, CheckCircle2, ZoomIn, X } from 'lucide-react';
 
-const RealityCheck = () => {
-  const [isZoomed, setIsZoomed] = useState(false);
-
+const RealityCheck = ({ onOpenLightbox }) => {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -78,8 +76,8 @@ const RealityCheck = () => {
                   
                   {/* Zoomable Image Container */}
                   <div 
-                    className="relative group cursor-pointer overflow-hidden rounded-lg"
-                    onClick={() => setIsZoomed(true)}
+                    className="relative group cursor-zoom-in overflow-hidden rounded-lg"
+                    onClick={() => onOpenLightbox('Bedarfsprognosen.png')}
                   >
                     <motion.img 
                       src="Bedarfsprognosen.png" 
@@ -102,6 +100,7 @@ const RealityCheck = () => {
                       </motion.div>
                     </div>
                   </div>
+                  <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
                   
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <a 
@@ -120,39 +119,6 @@ const RealityCheck = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Lightbox Modal */}
-      <AnimatePresence>
-        {isZoomed && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsZoomed(false)}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4 cursor-zoom-out"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full bg-white p-2 rounded-2xl shadow-2xl"
-            >
-              <button
-                onClick={() => setIsZoomed(false)}
-                className="absolute -top-12 right-0 text-white hover:text-gray-200 transition-colors"
-              >
-                <X size={32} />
-              </button>
-              <img
-                src="Bedarfsprognosen.png"
-                alt="Bedarfsprognosen Chart Full Size"
-                className="w-full h-auto rounded-xl"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

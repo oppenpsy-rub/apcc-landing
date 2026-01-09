@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Integration = () => {
+const Integration = ({ onOpenLightbox }) => {
   const [activeTab, setActiveTab] = useState('1fach');
 
   const tabs = [
@@ -50,22 +50,34 @@ const Integration = () => {
                   <p>
                     <span className="font-bold text-rub-green">Voll integriert.</span> Nutze deinen Ergänzungsbereich (Modul B) und Wahlbereich. Du machst keine Extra-CP.
                   </p>
-                  <img 
-                    src="integration-1-fach.png" 
-                    alt="Integration 1-Fach Master" 
-                    className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100"
-                  />
+                  <div 
+                    className="cursor-zoom-in group" 
+                    onClick={() => onOpenLightbox('integration-1-fach.png')}
+                  >
+                    <img 
+                      src="integration-1-fach.png" 
+                      alt="Integration 1-Fach Master" 
+                      className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                    <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
+                  </div>
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-6">
                   <p>
                     <span className="font-bold text-rub-green">Das Exzellenz-Zertifikat.</span> Nutze den Wahlbereich und absolviere das Praktikum als wertvolle Zusatzqualifikation.
                   </p>
-                  <img 
-                    src="integration-2-fach.png" 
-                    alt="Integration 2-Fach Master" 
-                    className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100"
-                  />
+                  <div 
+                    className="cursor-zoom-in group" 
+                    onClick={() => onOpenLightbox('integration-2-fach.png')}
+                  >
+                    <img 
+                      src="integration-2-fach.png" 
+                      alt="Integration 2-Fach Master" 
+                      className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                    <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
+                  </div>
                 </div>
               )}
             </motion.div>
