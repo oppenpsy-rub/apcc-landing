@@ -67,8 +67,8 @@ const RealityCheck = ({ onOpenLightbox }) => {
               </div>
 
               {/* Right Content: Image */}
-              <div className="w-full md:w-2/5 flex flex-col justify-center">
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div className="w-full md:w-1/2 flex flex-col justify-center">
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                   <div className="flex items-center gap-2 mb-4 text-gray-500 text-sm font-semibold uppercase tracking-wider">
                     <TrendingUp size={16} />
                     <span>Einstellungschancen Prognose 2030+</span>

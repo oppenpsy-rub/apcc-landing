@@ -13,6 +13,7 @@ import Testimonial from './components/Testimonial';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -37,6 +38,7 @@ function App() {
       </main>
       <Footer onOpenBooking={openBooking} />
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+      <ScrollToTop />
 
       {/* Lightbox Modal */}
       <AnimatePresence>

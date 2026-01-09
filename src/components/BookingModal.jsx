@@ -7,6 +7,11 @@ const BookingModal = ({ isOpen, onClose }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date(2026, 0)); // Start at Jan 2026
+  const [contactData, setContactData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
   
@@ -49,15 +54,22 @@ const BookingModal = ({ isOpen, onClose }) => {
     setSelectedTime(null); // Reset time when date changes
   };
 
-  const handleBook = () => {
+  const handleNextStep = () => {
     setStep(2);
+  };
+
+  const handleConfirm = (e) => {
+    e.preventDefault();
+    setStep(3);
     // Here you would typically send data to a backend
+    console.log({
+      date: selectedDate,
+      time: selectedTime,
+      ...contactData
+    });
+    
     setTimeout(() => {
-      // Auto close after success message
-      // onClose(); 
-      // setStep(1); 
-      // setSelectedDate(null);
-      // setSelectedTime(null);
+      // Auto close after success message if needed
     }, 3000);
   };
 
@@ -67,6 +79,7 @@ const BookingModal = ({ isOpen, onClose }) => {
       setStep(1);
       setSelectedDate(null);
       setSelectedTime(null);
+      setContactData({ name: '', email: '', message: '' });
       setCurrentMonth(new Date(2026, 0)); // Reset to Jan 2026
     }, 300);
   }
@@ -99,7 +112,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 <X size={20} className="text-gray-500" />
               </button>
 
-              {step === 1 ? (
+              {step === 1 && (
                 <div className="p-6 md:p-8">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-rub-blue mb-2">Beratungstermin</h3>
@@ -191,7 +204,7 @@ const BookingModal = ({ isOpen, onClose }) => {
 
                   <button
                     disabled={!selectedDate || !selectedTime}
-                    onClick={handleBook}
+                    onClick={handleNextStep}
                     className={`
                       w-full py-3 rounded-xl font-bold text-white transition-all
                       ${(!selectedDate || !selectedTime)
@@ -199,10 +212,74 @@ const BookingModal = ({ isOpen, onClose }) => {
                         : 'bg-rub-green hover:bg-opacity-90 shadow-lg hover:shadow-xl'}
                     `}
                   >
-                    Termin bestätigen
+                    Weiter
                   </button>
                 </div>
-              ) : (
+              )}
+
+              {step === 2 && (
+                <div className="p-6 md:p-8">
+                  <div className="mb-6">
+                    <button 
+                      onClick={() => setStep(1)}
+                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-rub-blue mb-4 transition-colors"
+                    >
+                      <ChevronLeft size={16} /> Zurück zur Terminauswahl
+                    </button>
+                    <h3 className="text-2xl font-bold text-rub-blue mb-2">Deine Kontaktdaten</h3>
+                    <p className="text-gray-500 text-sm">
+                      Termin: {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleConfirm} className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        required
+                        value={contactData.name}
+                        onChange={(e) => setContactData({...contactData, name: e.target.value})}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all"
+                        placeholder="Dein Name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+                      <input
+                        type="email"
+                        id="email"
+                        required
+                        value={contactData.email}
+                        onChange={(e) => setContactData({...contactData, email: e.target.value})}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all"
+                        placeholder="deine.email@beispiel.de"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Nachricht (Optional)</label>
+                      <textarea
+                        id="message"
+                        rows={3}
+                        value={contactData.message}
+                        onChange={(e) => setContactData({...contactData, message: e.target.value})}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all resize-none"
+                        placeholder="Was möchtest du besprechen?"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full py-3 rounded-xl font-bold text-white bg-rub-green hover:bg-opacity-90 shadow-lg hover:shadow-xl transition-all mt-6"
+                    >
+                      Termin verbindlich buchen
+                    </button>
+                  </form>
+                </div>
+              )}
+
+              {step === 3 && (
                 <div className="p-12 flex flex-col items-center text-center">
                   <motion.div
                     initial={{ scale: 0 }}
@@ -214,7 +291,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                   </motion.div>
                   <h3 className="text-2xl font-bold text-rub-blue mb-2">Termin gebucht!</h3>
                   <p className="text-gray-600 mb-8">
-                    Wir haben dir eine Bestätigung an deine E-Mail gesendet. Wir freuen uns auf das Gespräch am {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr.
+                    Hallo {contactData.name}, wir haben dir eine Bestätigung an {contactData.email} gesendet. Wir freuen uns auf das Gespräch am {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr.
                   </p>
                   <button
                     onClick={reset}

@@ -32,8 +32,14 @@ const Footer = ({ onOpenBooking }) => {
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Ruhr-Universität Bochum. Alle Rechte vorbehalten.
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <div className="mb-4 md:mb-0">
+            © {new Date().getFullYear()} Ruhr-Universität Bochum. Alle Rechte vorbehalten.
+          </div>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-rub-green transition-colors">Impressum</a>
+            <a href="#" className="hover:text-rub-green transition-colors">Datenschutz</a>
+          </div>
         </div>
       </div>
     </footer>
