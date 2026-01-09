@@ -103,8 +103,15 @@ const RealityCheck = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-gray-400 text-center">
-                    *Quelle: Schulministerium NRW
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <a 
+                      href="https://www.schulministerium.nrw/system/files/media/document/file/lehrkraeftebedarfsprognose_maerz_2023.pdf#page=24"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-gray-400 hover:text-gray-600 underline mt-2 block text-center"
+                    >
+                      Quelle: Schulministerium NRW (Prognose 2023, S. 24)
+                    </a>
                   </div>
                 </div>
               </div>
