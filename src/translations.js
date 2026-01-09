@@ -269,7 +269,8 @@ export const translations = {
       items: [
         {
           q: "Will my studies take longer?",
-          a: "It depends on your degree program. In the 1-Subject Master: No. Here the profile is fully integrated into the 100 CP. You stay within the standard period of study. In the 2-Subject Master & M.Ed.: Yes, realistically count on 1 to 2 additional semesters. Since the certificate is an extensive additional qualification (approx. 35-40 CP), you provide these achievements additionally. Our tip: See it as an investment. You consciously take time to make your CV competitive – just as valuable as a year abroad."
+          a: "It depends on your degree program. In the 1-Subject Master: No. Here the profile is fully integrated into the 100 CP. You stay within the standard period of study. In the 2-Subject Master & M.Ed.: Yes, realistically count on 1 to 2 additional semesters. Since the certificate is an extensive additional qualification (approx. 35-40 CP), you provide these achievements additionally.",
+          tip: "Our tip: See it as an investment. You consciously take time to make your CV competitive – just as valuable as a year abroad."
         },
         {
           q: "Is a job guaranteed?",
