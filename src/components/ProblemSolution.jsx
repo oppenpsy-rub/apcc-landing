@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../LanguageContext';
 
 const ProblemSolution = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="problem-solution" className="py-20 bg-rub-lightGray">
       <div className="container mx-auto px-6">
@@ -27,19 +30,19 @@ const ProblemSolution = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-rub-blue mb-6">
-              Schluss mit "Was macht man damit?"
+              {t('problemSolution.title')}
             </h2>
             <p className="text-lg text-rub-darkText leading-relaxed mb-6">
-              Wer international erfolgreich sein will, muss mehr verstehen als nur die Sprache. Das APCC-Zertifikat macht dich zur kommunikativen Schnittstelle: Du verbindest dein Romanistik-Studium mit Einblicken in Unternehmensstrukturen und sammelst relevante Praxiserfahrung.
+              {t('problemSolution.description')}
             </p>
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-rub-green"></div>
-                <span className="font-medium">Ohne Zeitverlust</span>
+                <span className="font-medium">{t('problemSolution.benefit1')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-rub-green"></div>
-                <span className="font-medium">Ohne PO-Wechsel</span>
+                <span className="font-medium">{t('problemSolution.benefit2')}</span>
               </div>
             </div>
           </motion.div>

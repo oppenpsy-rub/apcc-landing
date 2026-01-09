@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar as CalendarIcon, Clock, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const BookingModal = ({ isOpen, onClose }) => {
+  const { t } = useLanguage();
   const [step, setStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -13,7 +15,11 @@ const BookingModal = ({ isOpen, onClose }) => {
     message: ''
   });
 
-  const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+  const days = t('booking.days') || ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+  const monthNames = t('booking.months') || [
+    'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
+  ];
   
   const getDaysInMonth = (date) => {
     return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
@@ -25,11 +31,6 @@ const BookingModal = ({ isOpen, onClose }) => {
     const day = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
     return day === 0 ? 6 : day - 1;
   };
-
-  const monthNames = [
-    'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
-  ];
 
   const handlePrevMonth = () => {
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1));
@@ -115,8 +116,8 @@ const BookingModal = ({ isOpen, onClose }) => {
               {step === 1 && (
                 <div className="p-6 md:p-8">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-rub-blue mb-2">Beratungstermin</h3>
-                    <p className="text-gray-500 text-sm">Wähle einen passenden Termin für dein Gespräch.</p>
+                    <h3 className="text-2xl font-bold text-rub-blue mb-2">{t('booking.title')}</h3>
+                    <p className="text-gray-500 text-sm">{t('booking.subtitle')}</p>
                   </div>
 
                   {/* Calendar View */}
@@ -181,7 +182,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                     >
                       <div className="flex items-center gap-2 mb-3">
                         <Clock size={16} className="text-rub-green" />
-                        <span className="font-semibold text-sm text-gray-700">Verfügbare Zeiten</span>
+                        <span className="font-semibold text-sm text-gray-700">{t('booking.availableTimes')}</span>
                       </div>
                       <div className="grid grid-cols-3 gap-2">
                         {timeSlots.map(time => (
@@ -212,7 +213,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                         : 'bg-rub-green hover:bg-opacity-90 shadow-lg hover:shadow-xl'}
                     `}
                   >
-                    Weiter
+                    {t('booking.next')}
                   </button>
                 </div>
               )}
@@ -224,17 +225,17 @@ const BookingModal = ({ isOpen, onClose }) => {
                       onClick={() => setStep(1)}
                       className="flex items-center gap-1 text-sm text-gray-500 hover:text-rub-blue mb-4 transition-colors"
                     >
-                      <ChevronLeft size={16} /> Zurück zur Terminauswahl
+                      <ChevronLeft size={16} /> {t('booking.back')}
                     </button>
-                    <h3 className="text-2xl font-bold text-rub-blue mb-2">Deine Kontaktdaten</h3>
+                    <h3 className="text-2xl font-bold text-rub-blue mb-2">{t('booking.contactTitle')}</h3>
                     <p className="text-gray-500 text-sm">
-                      Termin: {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr
+                      {t('booking.appointmentSummaryLabel')} {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} {t('booking.atTime')} {selectedTime} {t('booking.clock')}
                     </p>
                   </div>
 
                   <form onSubmit={handleConfirm} className="space-y-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">{t('booking.nameLabel')}</label>
                       <input
                         type="text"
                         id="name"
@@ -242,11 +243,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                         value={contactData.name}
                         onChange={(e) => setContactData({...contactData, name: e.target.value})}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all"
-                        placeholder="Dein Name"
+                        placeholder={t('booking.namePlaceholder')}
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">{t('booking.emailLabel')}</label>
                       <input
                         type="email"
                         id="email"
@@ -254,18 +255,18 @@ const BookingModal = ({ isOpen, onClose }) => {
                         value={contactData.email}
                         onChange={(e) => setContactData({...contactData, email: e.target.value})}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all"
-                        placeholder="deine.email@beispiel.de"
+                        placeholder={t('booking.emailPlaceholder')}
                       />
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Nachricht (Optional)</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">{t('booking.messageLabel')}</label>
                       <textarea
                         id="message"
                         rows={3}
                         value={contactData.message}
                         onChange={(e) => setContactData({...contactData, message: e.target.value})}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rub-blue focus:border-transparent outline-none transition-all resize-none"
-                        placeholder="Was möchtest du besprechen?"
+                        placeholder={t('booking.messagePlaceholder')}
                       />
                     </div>
 
@@ -273,7 +274,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                       type="submit"
                       className="w-full py-3 rounded-xl font-bold text-white bg-rub-green hover:bg-opacity-90 shadow-lg hover:shadow-xl transition-all mt-6"
                     >
-                      Termin verbindlich buchen
+                      {t('booking.submit')}
                     </button>
                   </form>
                 </div>
@@ -289,15 +290,15 @@ const BookingModal = ({ isOpen, onClose }) => {
                   >
                     <CheckCircle size={40} className="text-green-600" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-rub-blue mb-2">Termin gebucht!</h3>
+                  <h3 className="text-2xl font-bold text-rub-blue mb-2">{t('booking.successTitle')}</h3>
                   <p className="text-gray-600 mb-8">
-                    Hallo {contactData.name}, wir haben dir eine Bestätigung an {contactData.email} gesendet. Wir freuen uns auf das Gespräch am {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} um {selectedTime} Uhr.
+                    {t('booking.successMessagePart1')} {contactData.name}, {t('booking.successMessagePart2')} {contactData.email} {t('booking.successMessagePart3')} {selectedDate}. {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()} {t('booking.atTime')} {selectedTime} {t('booking.clock')}.
                   </p>
                   <button
                     onClick={reset}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-lg transition-colors"
                   >
-                    Schließen
+                    {t('booking.close')}
                   </button>
                 </div>
               )}

@@ -1,31 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Globe2, Users, Briefcase, HeartHandshake } from 'lucide-react';
-
-const perspectives = [
-  {
-    icon: Globe2,
-    title: "Corporate Communications",
-    description: "Kommunikation für internationale Märkte steuern."
-  },
-  {
-    icon: Users,
-    title: "International HR",
-    description: "Fachkräfte aus Europa gewinnen & integrieren."
-  },
-  {
-    icon: Briefcase,
-    title: "Executive Assistant",
-    description: "Die rechte Hand der Geschäftsführung im Frankreich/Italien-Geschäft."
-  },
-  {
-    icon: HeartHandshake,
-    title: "Diversity & Culture",
-    description: "Zusammenarbeit in multikulturellen Teams moderieren."
-  }
-];
+import { useLanguage } from '../LanguageContext';
 
 const JobPerspectives = () => {
+  const { t } = useLanguage();
+
+  const perspectives = [
+    { icon: Globe2 },
+    { icon: Users },
+    { icon: Briefcase },
+    { icon: HeartHandshake }
+  ];
+
   return (
     <section className="py-20 bg-rub-lightGray">
       <div className="container mx-auto px-6">
@@ -36,7 +23,7 @@ const JobPerspectives = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold font-serif text-rub-blue mb-6"
           >
-            Wo Romanist:innen gebraucht werden
+            {t('jobPerspectives.title')}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +32,7 @@ const JobPerspectives = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-rub-darkText/80 leading-relaxed"
           >
-            Unternehmen suchen nicht nur BWLer. Sie suchen auch DICH, weil du zwischen den Zeilen lesen und Kulturen übersetzen kannst.
+            {t('jobPerspectives.subtitle')}
           </motion.p>
         </div>
 
@@ -62,9 +49,11 @@ const JobPerspectives = () => {
               <div className="w-14 h-14 bg-rub-blue/5 rounded-full flex items-center justify-center mb-6 mx-auto text-rub-blue">
                 <item.icon size={28} />
               </div>
-              <h3 className="text-xl font-bold text-rub-blue mb-3 text-center">{item.title}</h3>
+              <h3 className="text-xl font-bold text-rub-blue mb-3 text-center">
+                {t(`jobPerspectives.items.${index}.title`)}
+              </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                {item.description}
+                {t(`jobPerspectives.items.${index}.description`)}
               </p>
             </motion.div>
           ))}
@@ -85,7 +74,7 @@ const JobPerspectives = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end justify-center pb-10">
             <p className="text-white text-xl md:text-2xl font-serif italic text-center px-4 max-w-3xl">
-              "Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg."
+              {t('jobPerspectives.quote')}
             </p>
           </div>
         </motion.div>

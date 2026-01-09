@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useLanguage } from '../LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const { t } = useLanguage();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
@@ -25,14 +28,19 @@ const Header = ({ onOpenBooking }) => {
           rel="noopener noreferrer"
           className={`text-sm sm:text-lg md:text-xl font-bold tracking-tight hover:opacity-80 transition-opacity ${isScrolled ? 'text-rub-blue' : 'text-white'}`}
         >
-          RUB <span className="font-normal">| Romanisches Seminar</span>
+          RUB <span className="font-normal">| {t('header.title')}</span>
         </a>
-        <button 
-          onClick={onOpenBooking}
-          className="bg-rub-green hover:bg-opacity-90 text-white font-medium py-2 px-3 md:px-6 text-xs md:text-base rounded-full transition-all shadow-lg hover:shadow-xl shrink-0 ml-2"
-        >
-          Beratungstermin
-        </button>
+        
+        <div className="flex items-center gap-2 md:gap-4">
+          <LanguageSwitcher />
+          
+          <button 
+            onClick={onOpenBooking}
+            className="bg-rub-green hover:bg-opacity-90 text-white font-medium py-2 px-3 md:px-6 text-xs md:text-base rounded-full transition-all shadow-lg hover:shadow-xl shrink-0"
+          >
+            {t('header.bookingButton')}
+          </button>
+        </div>
       </div>
     </motion.header>
   );

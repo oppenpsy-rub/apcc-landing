@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const ScrollToTop = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const { scrollY } = useScroll();
 
@@ -27,7 +29,7 @@ const ScrollToTop = () => {
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 z-40 bg-rub-blue text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-colors"
           whileHover={{ y: -3 }}
-          aria-label="Nach oben scrollen"
+          aria-label={t('scrollToTop.label')}
         >
           <ArrowUp size={24} />
         </motion.button>

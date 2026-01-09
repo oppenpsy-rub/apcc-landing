@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, BookOpen, Rocket } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
-const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = false, delay }) => (
+const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = false, delay, highlightLabel }) => (
   <motion.div 
     className={`p-6 md:p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl relative overflow-hidden ${
       highlight 
@@ -18,7 +19,7 @@ const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = 
   >
     {highlight && (
       <div className="absolute top-0 right-0 bg-rub-green text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-        HIGHLIGHT
+        {highlightLabel}
       </div>
     )}
     <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
@@ -32,36 +33,39 @@ const Card = ({ icon: Icon, title, description, highlight = false, blueBorder = 
 );
 
 const ThreePillars = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-rub-blue mb-4">
-            Das 3-Säulen-Zertifikat
+            {t('threePillars.title')}
           </h2>
-          <p className="text-xl text-gray-500">Gesamtumfang ca. 40 CP</p>
+          <p className="text-xl text-gray-500">{t('threePillars.subtitle')}</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card 
             icon={Briefcase}
-            title="Organisationskultur"
-            description="Verstehe, wie Unternehmen 'ticken'. Lerne Grundlagen der Arbeitspsychologie und des Personalwesens."
+            title={t('threePillars.cards.0.title')}
+            description={t('threePillars.cards.0.description')}
             delay={0}
             blueBorder={true}
           />
           <Card 
             icon={BookOpen}
-            title="Kultur- & Sprachanalyse"
-            description="Nutze deine Analysefähigkeit für Corporate Storytelling, Diskursanalyse und interkulturelle Verhandlung."
+            title={t('threePillars.cards.1.title')}
+            description={t('threePillars.cards.1.description')}
             delay={0.2}
             blueBorder={true}
           />
           <Card 
             icon={Rocket}
-            title="Praxis & Transfer"
-            description="Wende philologische Methoden auf reale Unternehmensfragen an. (Praxisphase, 15 CP)"
+            title={t('threePillars.cards.2.title')}
+            description={t('threePillars.cards.2.description')}
             highlight={true}
+            highlightLabel={t('threePillars.highlight')}
             delay={0.4}
           />
         </div>
@@ -81,7 +85,7 @@ const ThreePillars = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-rub-blue/80 to-transparent flex items-end p-8">
             <p className="text-white text-lg md:text-xl font-medium max-w-2xl">
-              Erweitere deinen Horizont – akademisch und kulturell.
+              {t('threePillars.imageCaption')}
             </p>
           </div>
         </motion.div>

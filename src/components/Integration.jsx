@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../LanguageContext';
 
 const Integration = ({ onOpenLightbox }) => {
   const [activeTab, setActiveTab] = useState('1fach');
+  const { t } = useLanguage();
 
   const tabs = [
-    { id: '1fach', label: '1-Fach Master' },
-    { id: '2fach', label: '2-Fach Master / M.Ed.' },
+    { id: '1fach', label: t('integration.tabs.oneSubject') },
+    { id: '2fach', label: t('integration.tabs.twoSubject') },
   ];
 
   return (
     <section className="py-20 bg-rub-lightGray">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-rub-blue mb-12">
-          So passt es in dein Studium
+          {t('integration.title')}
         </h2>
 
         <div className="flex justify-center mb-8">
@@ -48,7 +50,7 @@ const Integration = ({ onOpenLightbox }) => {
               {activeTab === '1fach' ? (
                 <div className="flex flex-col items-center gap-6">
                   <p>
-                    <span className="font-bold text-rub-green">Voll integriert.</span> Nutze deinen Ergänzungsbereich (Modul B) und Wahlbereich. Du machst keine Extra-CP.
+                    <span className="font-bold text-rub-green">{t('integration.content.oneSubject.highlight')}</span> {t('integration.content.oneSubject.text')}
                   </p>
                   <div 
                     className="cursor-zoom-in group" 
@@ -59,13 +61,13 @@ const Integration = ({ onOpenLightbox }) => {
                       alt="Integration 1-Fach Master" 
                       className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
                     />
-                    <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
+                    <p className="text-xs text-gray-400 text-center mt-2">{t('integration.clickToZoom')}</p>
                   </div>
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-6">
                   <p>
-                    <span className="font-bold text-rub-green">Das Exzellenz-Zertifikat.</span> Nutze den Wahlbereich und absolviere das Praktikum als wertvolle Zusatzqualifikation.
+                    <span className="font-bold text-rub-green">{t('integration.content.twoSubject.highlight')}</span> {t('integration.content.twoSubject.text')}
                   </p>
                   <div 
                     className="cursor-zoom-in group" 
@@ -76,7 +78,7 @@ const Integration = ({ onOpenLightbox }) => {
                       alt="Integration 2-Fach Master" 
                       className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
                     />
-                    <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
+                    <p className="text-xs text-gray-400 text-center mt-2">{t('integration.clickToZoom')}</p>
                   </div>
                 </div>
               )}

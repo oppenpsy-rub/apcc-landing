@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Info } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const FAQItem = ({ question, answer }) => {
           >
             <div className="pb-6 flex gap-4 items-start">
               <Info className="text-rub-green shrink-0 mt-1" size={20} />
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
                 {answer}
               </p>
             </div>
@@ -42,45 +43,13 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
-  const faqs = [
-    {
-      q: "Dauert mein Studium dadurch länger?",
-      a: (
-        <>
-          <strong>Es kommt auf deinen Studiengang an.</strong>
-          <br /><br />
-          <strong>Im 1-Fach-Master:</strong> Nein. Hier ist das Profil vollständig in die 100 CP integriert. Du bleibst in der Regelstudienzeit.
-          <br /><br />
-          <strong>Im 2-Fach-Master & M.Ed.:</strong> Ja, rechne realistisch mit <strong>1 bis 2 Zusatzsemestern</strong>. Da das Zertifikat eine umfangreiche Zusatzqualifikation (ca. 35-40 CP) ist, erbringst du diese Leistungen zusätzlich.
-          <div className="mt-6 p-4 bg-rub-blue/5 border-l-4 border-rub-green rounded-r-lg">
-            <span className="font-bold text-rub-blue block mb-1">Unser Tipp:</span>
-            <span className="text-gray-700">Sieh es als Investment. Du nimmst dir bewusst Zeit, um deinen Lebenslauf wettbewerbsfähig zu machen – ähnlich wertvoll wie ein Auslandsjahr.</span>
-          </div>
-        </>
-      )
-    },
-    {
-      q: "Wird mir ein Job garantiert?",
-      a: "Seriöse Antwort: Nein – das kann keine Uni. Aber: Das Zertifikat löst das Hauptproblem von Geisteswissenschaftler:innen (fehlende Praxis). Du hast durch das Projektpraktikum oft schon den Fuß in der Tür und hebst dich durch BWL-Kenntnisse massiv von Mitbewerber:innen ab."
-    },
-    {
-      q: "Für wen ist APCC geeignet?",
-      a: "Für alle Romanist:innen, die mehr Optionen als nur Schule wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als Plan B-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
-    },
-    {
-      q: "Muss ich die Prüfungsordnung wechseln?",
-      a: "Nein, das Profil nutzt die freien Bereiche deiner PO 2016. Du kannst es nahtlos in deinen bestehenden Studienplan integrieren."
-    },
-    {
-      q: "Kostet das Zertifikat etwas?",
-      a: "Nein, es ist Teil deines Studiums an der RUB und vollständig kostenfrei für eingeschriebene Studierende."
-    }
-  ];
+  const { t } = useLanguage();
+  const faqs = t('faq.items') || [];
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-rub-blue mb-12">Häufige Fragen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-rub-blue mb-12">{t('faq.title')}</h2>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8">
           {faqs.map((faq, idx) => (
             <FAQItem key={idx} question={faq.q} answer={faq.a} />

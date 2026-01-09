@@ -1,32 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
-const testimonials = [
-  {
-    image: "Testimonial.png",
-    quote: "Dank APCC habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich im Marketing eines globalen Konzerns in Mailand.",
-    name: "Marie S.",
-    title: "Absolventin (M.A. Romanistik Italienisch)"
-  },
-  {
-    image: "Testimonial_2.png",
-    quote: "Ich liebe die französische Sprache, aber ins Lehramt wollte ich nie. Das APCC-Profil war der Gamechanger: Mein Praktikum bei einem Logistik-Riesen in Paris war der direkte Türöffner in den Job.",
-    name: "Jonas B.",
-    title: "Absolvent (M.A. Romanistik Französisch)"
-  },
-  {
-    image: "Testimonial_3.png",
-    quote: "Referendariat bestanden, aber keine Planstelle bekommen – das ist leider Realität. Statt auf eine Stelle zu warten, studiere ich jetzt das APCC-Zertifikat oben drauf. Es ist meine Brücke in die Wirtschaft: Zu meinen didaktischen Skills hole ich mir jetzt das Management-Wissen.",
-    name: "Mario R.",
-    title: "Absolvent (2. Staatsexamen) & APCC-Teilnehmer"
-  }
+const testimonialImages = [
+  "Testimonial.png",
+  "Testimonial_2.png",
+  "Testimonial_3.png"
 ];
 
 const Testimonial = () => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Merge translated items with images
+  const testimonialItems = t('testimonial.items');
+  const testimonials = Array.isArray(testimonialItems) 
+    ? testimonialItems.map((item, index) => ({
+        ...item,
+        image: testimonialImages[index] || "Testimonial.png"
+      }))
+    : [];
 
   useEffect(() => {
     let interval;
@@ -78,7 +74,7 @@ const Testimonial = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-white text-center mb-24"
         >
-          Was unsere Absolvent:innen sagen
+          {t('testimonial.title')}
         </motion.h2>
 
         <div 
@@ -98,27 +94,27 @@ const Testimonial = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }
               }}
-              className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative pt-20 flex flex-col items-center text-center w-full"
+              className="absolute w-full"
             >
-              {/* Floating Avatar */}
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full border-4 border-rub-green overflow-hidden shadow-lg bg-gray-200 z-20">
-                <img 
-                  src={testimonials[currentIndex].image} 
-                  alt={testimonials[currentIndex].name} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Quote Icon */}
-              <Quote size={48} className="absolute top-6 right-6 text-rub-blue/10" />
-
-              <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic relative z-10 mt-4">
-                "{testimonials[currentIndex].quote}"
-              </blockquote>
-              
-              <div className="mt-auto">
-                <div className="text-rub-blue font-bold text-xl">{testimonials[currentIndex].name}</div>
-                <div className="text-rub-green font-medium text-sm mt-1">{testimonials[currentIndex].title}</div>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full border-4 border-white/20 overflow-hidden mb-8 shadow-xl">
+                  <img 
+                    src={testimonials[currentIndex]?.image} 
+                    alt={testimonials[currentIndex]?.name} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <Quote size={40} className="text-rub-green mb-6 opacity-50" />
+                
+                <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-8 italic">
+                  "{testimonials[currentIndex]?.quote}"
+                </p>
+                
+                <div>
+                  <h4 className="text-lg font-bold text-white">{testimonials[currentIndex]?.name}</h4>
+                  <p className="text-rub-green text-sm">{testimonials[currentIndex]?.title}</p>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -126,33 +122,29 @@ const Testimonial = () => {
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute top-1/2 -left-4 md:-left-16 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-all border border-white/20"
-            aria-label="Previous testimonial"
+            className="absolute top-1/2 -left-12 -translate-y-1/2 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all hidden md:block"
           >
             <ChevronLeft size={32} />
           </button>
-          
           <button 
             onClick={nextSlide}
-            className="absolute top-1/2 -right-4 md:-right-16 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition-all border border-white/20"
-            aria-label="Next testimonial"
+            className="absolute top-1/2 -right-12 -translate-y-1/2 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all hidden md:block"
           >
             <ChevronRight size={32} />
           </button>
 
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-3 mt-8">
-            {testimonials.map((_, index) => (
+          {/* Dots */}
+          <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex gap-2">
+            {testimonials.map((_, idx) => (
               <button
-                key={index}
+                key={idx}
                 onClick={() => {
-                  setDirection(index > currentIndex ? 1 : -1);
-                  setCurrentIndex(index);
+                  setDirection(idx > currentIndex ? 1 : -1);
+                  setCurrentIndex(idx);
                 }}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "bg-rub-green w-8" : "bg-white/30 hover:bg-white/50"
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentIndex ? "w-8 bg-rub-green" : "bg-white/30 hover:bg-white/50"
                 }`}
-                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>

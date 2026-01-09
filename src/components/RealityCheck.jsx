@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, AlertCircle, CheckCircle2, ZoomIn, X } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const RealityCheck = ({ onOpenLightbox }) => {
+  const { t } = useLanguage();
+
+  const listItems = [
+    t('realityCheck.list.0'),
+    t('realityCheck.list.1'),
+    t('realityCheck.list.2')
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -28,29 +37,25 @@ const RealityCheck = ({ onOpenLightbox }) => {
                     <AlertCircle size={24} />
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold text-rub-blue">
-                    Reality Check: Warum APCC für M.Ed.-Studierende?
+                    {t('realityCheck.badge')}
                   </h2>
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight">
-                  Lehrkräftebedarfsprognose NRW: <br/>
-                  <span className="text-rub-blue">Bereite dich vor.</span>
+                  {t('realityCheck.title')} <br/>
+                  <span className="text-rub-blue">{t('realityCheck.titleHighlight')}</span>
                 </h3>
 
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Die aktuellen Prognosen für NRW zeigen: Während MINT-Fächer gesucht werden, sinken die Einstellungschancen für Französisch, Spanisch und Italienisch.
+                  {t('realityCheck.text1')}
                 </p>
 
                 <p className="text-gray-600 mb-8 leading-relaxed font-medium">
-                  Setze nicht alles auf eine Karte. Mit dem APCC-Zertifikat sicherst du dich ab. Du erwirbst eine wertvolle Doppelqualifikation für die freie Wirtschaft – falls es mit dem Referendariat nicht sofort klappt oder du später wechseln möchtest.
+                  {t('realityCheck.text2')}
                 </p>
 
                 <ul className="space-y-4">
-                  {[
-                    "Plan B in der Tasche: Direkter Einstieg in Unternehmen möglich.",
-                    "Auch als Lehrkraft profitierst du: Schulmanagement und Projektkoordination erfordern genau diese Wirtschaftskompetenzen.",
-                    "Zusatzqualifikation: Hebe dich von anderen Bewerber:innen ab."
-                  ].map((item, index) => (
+                  {listItems.map((item, index) => (
                     <motion.li 
                       key={index}
                       className="flex items-start gap-3"
@@ -71,7 +76,7 @@ const RealityCheck = ({ onOpenLightbox }) => {
                 <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                   <div className="flex items-center gap-2 mb-4 text-gray-500 text-sm font-semibold uppercase tracking-wider">
                     <TrendingUp size={16} />
-                    <span>Einstellungschancen Prognose 2030+</span>
+                    <span>{t('realityCheck.chartTitle')}</span>
                   </div>
                   
                   {/* Zoomable Image Container */}
@@ -100,7 +105,7 @@ const RealityCheck = ({ onOpenLightbox }) => {
                       </motion.div>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-400 text-center mt-2">(Klicken zum Vergrößern)</p>
+                  <p className="text-xs text-gray-400 text-center mt-2">{t('realityCheck.clickToZoom')}</p>
                   
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <a 
@@ -109,7 +114,7 @@ const RealityCheck = ({ onOpenLightbox }) => {
                       rel="noopener noreferrer"
                       className="text-xs text-gray-400 hover:text-gray-600 underline mt-2 block text-center"
                     >
-                      Quelle: Schulministerium NRW (Prognose 2023, S. 24)
+                      {t('realityCheck.source')}
                     </a>
                   </div>
                 </div>

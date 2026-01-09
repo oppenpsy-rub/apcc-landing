@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../LanguageContext';
+import CorporateTestimonial from './CorporateTestimonial';
 
 const Partners = () => {
+  const { t } = useLanguage();
   const partners = [
     "ALDI SÜD/NORD", "THYSSENKRUPP", "EVONIK", "HOCHTIEF", "RUHRTRIENNALE"
   ];
@@ -10,9 +13,9 @@ const Partners = () => {
     <section className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 text-center">
         <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">
-          Unser Praxis-Netzwerk im Ruhrgebiet
+          {t('partners.title')}
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 mb-16">
           {partners.map((partner, index) => (
             <motion.div
               key={index}
@@ -23,6 +26,8 @@ const Partners = () => {
             </motion.div>
           ))}
         </div>
+
+        <CorporateTestimonial />
       </div>
     </section>
   );
