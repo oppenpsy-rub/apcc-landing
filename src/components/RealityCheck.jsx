@@ -34,7 +34,7 @@ const RealityCheck = () => {
                   </h2>
                 </div>
 
-                <h3 className="text-3xl font-bold text-gray-800 mb-6 leading-tight">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 leading-tight">
                   Lehrkräftebedarfsprognose NRW: <br/>
                   <span className="text-rub-blue">Bereite dich vor.</span>
                 </h3>

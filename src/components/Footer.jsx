@@ -3,7 +3,7 @@ import { Mail, MapPin } from 'lucide-react';
 
 const Footer = ({ onOpenBooking }) => {
   return (
-    <footer className="bg-rub-blue text-white py-16">
+    <footer className="bg-rub-blue text-white py-10 md:py-16">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">

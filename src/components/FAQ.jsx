@@ -80,7 +80,7 @@ const FAQ = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="text-3xl font-bold text-center text-rub-blue mb-12">Häufige Fragen</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-rub-blue mb-12">Häufige Fragen</h2>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8">
           {faqs.map((faq, idx) => (
             <FAQItem key={idx} question={faq.q} answer={faq.a} />
