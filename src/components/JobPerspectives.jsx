@@ -76,7 +76,7 @@ const JobPerspectives = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          className="relative rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto"
         >
           <img 
             src="diversity_2.png" 

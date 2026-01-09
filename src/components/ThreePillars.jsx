@@ -72,7 +72,7 @@ const ThreePillars = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 rounded-2xl overflow-hidden shadow-2xl relative"
+          className="mt-16 rounded-2xl overflow-hidden shadow-2xl relative max-w-4xl mx-auto"
         >
           <img 
             src="diversity_4.png" 
