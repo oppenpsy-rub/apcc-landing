@@ -22,7 +22,7 @@ const RealityCheck = ({ onOpenLightbox }) => {
             <div className="flex flex-col md:flex-row gap-12 items-center">
               
               {/* Left Content */}
-              <div className="w-full md:w-3/5">
+              <div className="w-full md:w-1/2">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-yellow-100 p-2 rounded-lg text-yellow-700">
                     <AlertCircle size={24} />
