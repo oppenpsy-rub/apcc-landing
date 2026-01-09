@@ -37,8 +37,22 @@ const Footer = ({ onOpenBooking }) => {
             © {new Date().getFullYear()} Ruhr-Universität Bochum. Alle Rechte vorbehalten.
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-rub-green transition-colors">Impressum</a>
-            <a href="#" className="hover:text-rub-green transition-colors">Datenschutz</a>
+            <a 
+              href="https://www.ruhr-uni-bochum.de/de/impressum" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-rub-green transition-colors"
+            >
+              Impressum
+            </a>
+            <a 
+              href="https://www.ruhr-uni-bochum.de/de/datenschutzerklaerung" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-rub-green transition-colors"
+            >
+              Datenschutz
+            </a>
           </div>
         </div>
       </div>
