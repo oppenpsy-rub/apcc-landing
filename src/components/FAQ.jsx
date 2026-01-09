@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Info } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ({ question, answer, tip }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -31,9 +31,18 @@ const FAQItem = ({ question, answer }) => {
           >
             <div className="pb-6 flex gap-4 items-start">
               <Info className="text-rub-green shrink-0 mt-1" size={20} />
-              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
-                {answer}
-              </p>
+              <div className="flex-1">
+                <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
+                  {answer}
+                </p>
+                {tip && (
+                  <div className="mt-4 p-4 bg-rub-blue/5 rounded-lg border-l-4 border-rub-blue">
+                    <p className="text-rub-blue font-medium text-sm">
+                      {tip}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         )}
@@ -52,7 +61,7 @@ const FAQ = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-center text-rub-blue mb-12">{t('faq.title')}</h2>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8">
           {faqs.map((faq, idx) => (
-            <FAQItem key={idx} question={faq.q} answer={faq.a} />
+            <FAQItem key={idx} question={faq.q} answer={faq.a} tip={faq.tip} />
           ))}
         </div>
       </div>

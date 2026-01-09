@@ -32,7 +32,7 @@ const Header = ({ onOpenBooking }) => {
         </a>
         
         <div className="flex items-center gap-2 md:gap-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher isScrolled={isScrolled} />
           
           <button 
             onClick={onOpenBooking}

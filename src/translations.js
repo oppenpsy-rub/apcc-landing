@@ -103,7 +103,8 @@ export const translations = {
       items: [
         {
           q: "Dauert mein Studium dadurch länger?",
-          a: "Es kommt auf deinen Studiengang an. Im 1-Fach-Master: Nein. Hier ist das Profil vollständig in die 100 CP integriert. Du bleibst in der Regelstudienzeit. Im 2-Fach-Master & M.Ed.: Ja, rechne realistisch mit 1 bis 2 Zusatzsemestern. Da das Zertifikat eine umfangreiche Zusatzqualifikation (ca. 35-40 CP) ist, erbringst du diese Leistungen zusätzlich. Unser Tipp: Sieh es als Investment. Du nimmst dir bewusst Zeit, um deinen Lebenslauf wettbewerbsfähig zu machen – ähnlich wertvoll wie ein Auslandsjahr."
+          a: "Es kommt auf deinen Studiengang an. Im 1-Fach-Master: Nein. Hier ist das Profil vollständig in die 100 CP integriert. Du bleibst in der Regelstudienzeit. Im 2-Fach-Master & M.Ed.: Ja, rechne realistisch mit 1 bis 2 Zusatzsemestern. Da das Zertifikat eine umfangreiche Zusatzqualifikation (ca. 35-40 CP) ist, erbringst du diese Leistungen zusätzlich.",
+          tip: "Unser Tipp: Sieh es als Investment. Du nimmst dir bewusst Zeit, um deinen Lebenslauf wettbewerbsfähig zu machen – ähnlich wertvoll wie ein Auslandsjahr."
         },
         {
           q: "Wird mir ein Job garantiert?",
@@ -430,7 +431,8 @@ export const translations = {
       items: [
         {
           q: "Mes études dureront-elles plus longtemps ?",
-          a: "Cela dépend de votre cursus. En Master 1 matière : Non. Ici, le profil est entièrement intégré dans les 100 CP. Vous restez dans la durée normale des études. En Master 2 matières & M.Ed. : Oui, comptez de manière réaliste sur 1 à 2 semestres supplémentaires. Comme le certificat est une qualification supplémentaire étendue (env. 35-40 CP), vous fournissez ces prestations en plus. Notre conseil : Voyez-le comme un investissement. Vous prenez consciemment le temps de rendre votre CV compétitif – tout aussi précieux qu'une année à l'étranger."
+          a: "Cela dépend de votre cursus. En Master 1 matière : Non. Ici, le profil est entièrement intégré dans les 100 CP. Vous restez dans la durée normale des études. En Master 2 matières & M.Ed. : Oui, comptez de manière réaliste sur 1 à 2 semestres supplémentaires. Comme le certificat est une qualification supplémentaire étendue (env. 35-40 CP), vous fournissez ces prestations en plus.",
+          tip: "Notre conseil : Voyez-le comme un investissement. Vous prenez consciemment le temps de rendre votre CV compétitif – tout aussi précieux qu'une année à l'étranger."
         },
         {
           q: "Un emploi est-il garanti ?",

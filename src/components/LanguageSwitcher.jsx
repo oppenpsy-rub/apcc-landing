@@ -10,7 +10,7 @@ const languages = [
   { code: 'it', label: 'Italiano', flag: '🇮🇹' }
 ];
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ isScrolled }) => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -32,9 +32,13 @@ const LanguageSwitcher = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-full hover:bg-black/5 transition-colors text-sm font-medium"
+        className={`flex items-center gap-1.5 px-3 py-2 rounded-full transition-colors text-sm font-medium ${
+          isScrolled 
+            ? 'text-gray-700 hover:bg-black/5' 
+            : 'text-white hover:bg-white/10'
+        }`}
       >
-        <Globe size={16} className="text-gray-600" />
+        <Globe size={16} className={isScrolled ? "text-gray-600" : "text-white"} />
         <span className="uppercase">{language}</span>
       </button>
 
