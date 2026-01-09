@@ -594,7 +594,8 @@ export const translations = {
       items: [
         {
           q: "I miei studi dureranno di più?",
-          a: "Dipende dal tuo corso di studi. Nel Master a 1 materia: No. Qui il profilo è completamente integrato nei 100 CP. Rimani nel periodo di studio standard. Nel Master a 2 materie & M.Ed.: Sì, conta realisticamente su 1 o 2 semestri aggiuntivi. Poiché il certificato è una qualifica aggiuntiva estesa (ca. 35-40 CP), fornisci queste prestazioni in aggiunta. Il nostro consiglio: Vedilo come un investimento. Ti prendi consapevolmente del tempo per rendere il tuo CV competitivo – altrettanto prezioso di un anno all'estero."
+          a: "Dipende dal tuo corso di studi. Nel Master a 1 materia: No. Qui il profilo è completamente integrato nei 100 CP. Rimani nel periodo di studio standard. Nel Master a 2 materie & M.Ed.: Sì, conta realisticamente su 1 o 2 semestri aggiuntivi. Poiché il certificato è una qualifica aggiuntiva estesa (ca. 35-40 CP), fornisci queste prestazioni in aggiunta.",
+          tip: "Il nostro consiglio: Vedilo come un investimento. Ti prendi consapevolmente del tempo per rendere il tuo CV competitivo – altrettanto prezioso di un anno all'estero."
         },
         {
           q: "Mi viene garantito un lavoro?",
