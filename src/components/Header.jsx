@@ -13,6 +13,9 @@ const Header = ({ onOpenBooking }) => {
     setIsScrolled(latest > 50);
   });
 
+  // Im Hero-Bereich (scrollY < 50) das Logo weiß machen
+  const isInHero = !isScrolled;
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,6 +31,7 @@ const Header = ({ onOpenBooking }) => {
             src={portaLogo}
             alt="PoRTA Logo"
             className={`h-8 w-auto md:h-10 object-contain transition-all ${isScrolled ? '' : 'drop-shadow-lg'}`}
+            style={isInHero ? { filter: 'brightness(0) invert(1)' } : {}}
           />
           <div className="h-6 w-px bg-white/20" style={{ backgroundColor: isScrolled ? '#ddd' : 'rgba(255,255,255,0.2)' }}></div>
           <a 
