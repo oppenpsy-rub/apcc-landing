@@ -88,16 +88,6 @@ const PillarChart = ({ variant = '1fach' }) => {
             );
           })}
         </div>
-
-        {/* Info Text */}
-        <motion.p
-          className="text-gray-600 text-xs md:text-sm text-center italic"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-        >
-          📚 {t('integration.pillars_hover1fach')}
-        </motion.p>
       </div>
 
       {/* Module Modal */}
