@@ -118,7 +118,7 @@ const PillarChart = ({ variant = '1fach' }) => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-gradient-to-r from-rub-blue to-rub-green text-white p-6 border-b flex justify-between items-start">
+              <div className="sticky top-0 bg-rub-blue text-white p-6 border-b flex justify-between items-start">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold">{selectedModule.name}</h2>
                   <p className="text-blue-100 mt-2 text-sm md:text-base">
