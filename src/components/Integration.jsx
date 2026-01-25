@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../LanguageContext';
+import PillarChart from './PillarChart';
 
 const Integration = ({ onOpenLightbox }) => {
   const [activeTab, setActiveTab] = useState('1fach');
@@ -45,41 +46,21 @@ const Integration = ({ onOpenLightbox }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.3 }}
-              className="text-lg md:text-xl text-gray-700 w-full"
+              className="w-full"
             >
               {activeTab === '1fach' ? (
                 <div className="flex flex-col items-center gap-6">
-                  <p>
+                  <p className="text-lg md:text-xl text-gray-700">
                     <span className="font-bold text-rub-green">{t('integration.content.oneSubject.highlight')}</span> {t('integration.content.oneSubject.text')}
                   </p>
-                  <div 
-                    className="cursor-zoom-in group" 
-                    onClick={() => onOpenLightbox('integration-1-fach.png')}
-                  >
-                    <img 
-                      src="integration-1-fach.png" 
-                      alt="Integration 1-Fach Master" 
-                      className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                    <p className="text-xs text-gray-400 text-center mt-2">{t('integration.clickToZoom')}</p>
-                  </div>
+                  <PillarChart variant="1fach" />
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-6">
-                  <p>
+                  <p className="text-lg md:text-xl text-gray-700">
                     <span className="font-bold text-rub-green">{t('integration.content.twoSubject.highlight')}</span> {t('integration.content.twoSubject.text')}
                   </p>
-                  <div 
-                    className="cursor-zoom-in group" 
-                    onClick={() => onOpenLightbox('integration-2-fach.png')}
-                  >
-                    <img 
-                      src="integration-2-fach.png" 
-                      alt="Integration 2-Fach Master" 
-                      className="rounded-xl shadow-lg w-full max-w-2xl mt-4 border border-gray-100 transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                    <p className="text-xs text-gray-400 text-center mt-2">{t('integration.clickToZoom')}</p>
-                  </div>
+                  <PillarChart variant="2fach" />
                 </div>
               )}
             </motion.div>

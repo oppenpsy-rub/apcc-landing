@@ -71,6 +71,22 @@ export const translations = {
           text: "Nutze den Wahlbereich und absolviere das Praktikum als wertvolle Zusatzqualifikation."
         }
       },
+      pillars: {
+        culture: {
+          label: "Corporate Culture",
+          description: "Verstehe Unternehmensstrukturen, Organisationspsychologie und Unternehmenskultur."
+        },
+        romanistik: {
+          label: "Angewandte Romanistik",
+          description: "Nutze deine Analysekompetenzen für Sprache, Kultur und interkulturelle Kommunikation."
+        },
+        praxis: {
+          label: "Berufliche Praxis",
+          description: "Sammle echte Praxiserfahrung durch Praktika bei Unternehmen und Projekten."
+        }
+      },
+      pillars_hover1fach: "Hover über die Säulen für Details – ohne Extra-CP!",
+      pillars_hover2fach: "Hover über die Säulen für Details – als wertvolle Zusatzqualifikation!",
       clickToZoom: "(Klicken zum Vergrößern)"
     },
     partners: {
@@ -237,6 +253,22 @@ export const translations = {
           text: "Use the elective area and complete the internship as a valuable additional qualification."
         }
       },
+      pillars: {
+        culture: {
+          label: "Corporate Culture",
+          description: "Understand business structures, organizational psychology and corporate culture."
+        },
+        romanistik: {
+          label: "Applied Romance Studies",
+          description: "Use your analytical skills for language, culture and intercultural communication."
+        },
+        praxis: {
+          label: "Professional Practice",
+          description: "Gain real experience through internships at companies and projects."
+        }
+      },
+      pillars_hover1fach: "Hover over the pillars for details – no extra CP!",
+      pillars_hover2fach: "Hover over the pillars for details – as a valuable additional qualification!",
       clickToZoom: "(Click to zoom)"
     },
     partners: {
@@ -400,6 +432,22 @@ export const translations = {
           text: "Utilisez le domaine électif et complétez le stage comme une qualification supplémentaire précieuse."
         }
       },
+      pillars: {
+        culture: {
+          label: "Culture d'Entreprise",
+          description: "Comprenez les structures commerciales, la psychologie organisationnelle et la culture d'entreprise."
+        },
+        romanistik: {
+          label: "Études Romanes Appliquées",
+          description: "Utilisez vos compétences analytiques pour la langue, la culture et la communication interculturelle."
+        },
+        praxis: {
+          label: "Pratique Professionnelle",
+          description: "Acquérez une expérience réelle par le biais de stages en entreprise et de projets."
+        }
+      },
+      pillars_hover1fach: "Survolez les piliers pour plus de détails – sans CP supplémentaires!",
+      pillars_hover2fach: "Survolez les piliers pour plus de détails – comme une qualification supplémentaire précieuse!",
       clickToZoom: "(Cliquer pour agrandir)"
     },
     partners: {
@@ -563,6 +611,22 @@ export const translations = {
           text: "Usa l'area elettiva e completa lo stage come una preziosa qualifica aggiuntiva."
         }
       },
+      pillars: {
+        culture: {
+          label: "Cultura Aziendale",
+          description: "Comprendi le strutture aziendali, la psicologia organizzativa e la cultura aziendale."
+        },
+        romanistik: {
+          label: "Studi Romanzi Applicati",
+          description: "Usa le tue competenze analitiche per la lingua, la cultura e la comunicazione interculturale."
+        },
+        praxis: {
+          label: "Pratica Professionale",
+          description: "Acquisisci esperienza reale attraverso stage aziendali e progetti."
+        }
+      },
+      pillars_hover1fach: "Passa il cursore sui pilastri per i dettagli – senza CP extra!",
+      pillars_hover2fach: "Passa il cursore sui pilastri per i dettagli – come una preziosa qualifica aggiuntiva!",
       clickToZoom: "(Clicca per ingrandire)"
     },
     partners: {
