@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         rub: {
-          blue: '#003560',
-          green: '#8DAE10',
+          blue: '#17365c',
+          green: '#8dae10',
           lightGray: '#f8f9fa',
           darkText: '#333333',
         }
