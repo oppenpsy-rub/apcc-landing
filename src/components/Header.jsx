@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useLanguage } from '../LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import portaLogo from '/porta_logo.png';
 
 const Header = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +25,7 @@ const Header = ({ onOpenBooking }) => {
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center gap-3 md:gap-4">
           <img
-            src="/porta_logo.png"
+            src={portaLogo}
             alt="PoRTA Logo"
             className={`h-8 w-auto md:h-10 object-contain transition-all ${isScrolled ? '' : 'drop-shadow-lg'}`}
           />
