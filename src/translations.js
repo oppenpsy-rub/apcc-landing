@@ -40,7 +40,7 @@ export const translations = {
         "Wertvolle Skills auch im Schuldienst: Schulmanagement, Projektkoordination und internationale Schulpartnerschaften profitieren von deiner Wirtschaftskompetenz.",
         "Maximale Flexibilität: Du qualifizierst dich für Schule UND Wirtschaft – und kannst später frei wählen."
       ],
-      chartTitle: "Einstellungschancen Prognose 2030+",
+      chartTitle: "Dein Kompetenzprofil mit PoRTA",
       clickToZoom: "(Klicken zum Vergrößern)",
       source: "Quelle: Schulministerium NRW (Prognose 2023, S. 24)"
     },
@@ -206,7 +206,7 @@ export const translations = {
         "Valuable skills also in school service: School management, project coordination, and international school partnerships benefit from your business competence.",
         "Maximum flexibility: You qualify for school AND business – and can choose freely later."
       ],
-      chartTitle: "Hiring Chances Forecast 2030+",
+      chartTitle: "Your Competence Profile with PoRTA",
       clickToZoom: "(Click to zoom)",
       source: "Source: Ministry of Schools NRW (Forecast 2023, p. 24)"
     },
@@ -369,7 +369,7 @@ export const translations = {
         "Compétences précieuses aussi dans l'enseignement : Gestion scolaire, coordination de projets et partenariats scolaires internationaux bénéficient de votre compétence commerciale.",
         "Flexibilité maximale : Vous vous qualifiez pour l'école ET l'entreprise – et pouvez choisir librement plus tard."
       ],
-      chartTitle: "Prévision des chances d'embauche 2030+",
+      chartTitle: "Votre Profil de Compétences avec PoRTA",
       clickToZoom: "(Cliquer pour agrandir)",
       source: "Source : Ministère de l'École NRW (Prévision 2023, p. 24)"
     },
@@ -532,7 +532,7 @@ export const translations = {
         "Competenze preziose anche nel servizio scolastico: Gestione scolastica, coordinamento progetti e partenariati scolastici internazionali beneficiano della tua competenza aziendale.",
         "Massima flessibilità: Ti qualifichi per scuola E azienda – e puoi scegliere liberamente in seguito."
       ],
-      chartTitle: "Previsioni possibilità di assunzione 2030+",
+      chartTitle: "Il Tuo Profilo di Competenze con PoRTA",
       clickToZoom: "(Clicca per ingrandire)",
       source: "Fonte: Ministero della Scuola NRW (Previsione 2023, p. 24)"
     },
