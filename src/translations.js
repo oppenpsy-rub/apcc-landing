@@ -38,7 +38,7 @@ export const translations = {
       list: [
         "Breites Kompetenzprofil: Pädagogik + Wirtschaft = starkes Alleinstellungsmerkmal.",
         "Wertvolle Skills auch im Schuldienst: Schulmanagement, Projektkoordination und internationale Schulpartnerschaften profitieren von deiner Wirtschaftskompetenz.",
-        "Maximale Flexibilität: Du qualifizierst dich für Schule UND Wirtschaft – und kannst später frei wählen."
+        "Maximale Flexibilität: Du qualifizierst dich für Schule UND Wirtschaft – so kannst du später frei wählen."
       ],
       chartTitle: "Dein Kompetenzprofil mit PoRTA",
       clickToZoom: "(Klicken zum Vergrößern)",
@@ -204,7 +204,7 @@ export const translations = {
       list: [
         "Broad competence profile: Pedagogy + Business = strong selling point.",
         "Valuable skills also in school service: School management, project coordination, and international school partnerships benefit from your business competence.",
-        "Maximum flexibility: You qualify for school AND business – and can choose freely later."
+        "Maximum flexibility: You qualify for school AND business – so you can choose freely later."
       ],
       chartTitle: "Your Competence Profile with PoRTA",
       clickToZoom: "(Click to zoom)",
@@ -367,7 +367,7 @@ export const translations = {
       list: [
         "Profil de compétences large : Pédagogie + Business = argument distinctif.",
         "Compétences précieuses aussi dans l'enseignement : Gestion scolaire, coordination de projets et partenariats scolaires internationaux bénéficient de votre compétence commerciale.",
-        "Flexibilité maximale : Vous vous qualifiez pour l'école ET l'entreprise – et pouvez choisir librement plus tard."
+        "Flexibilité maximale : Vous vous qualifiez pour l'école ET l'entreprise – ainsi vous pouvez choisir librement plus tard."
       ],
       chartTitle: "Votre Profil de Compétences avec PoRTA",
       clickToZoom: "(Cliquer pour agrandir)",
@@ -530,7 +530,7 @@ export const translations = {
       list: [
         "Profilo di competenze ampio: Pedagogia + Business = forte punto di forza.",
         "Competenze preziose anche nel servizio scolastico: Gestione scolastica, coordinamento progetti e partenariati scolastici internazionali beneficiano della tua competenza aziendale.",
-        "Massima flessibilità: Ti qualifichi per scuola E azienda – e puoi scegliere liberamente in seguito."
+        "Massima flessibilità: Ti qualifichi per scuola E azienda – così puoi scegliere liberamente in seguito."
       ],
       chartTitle: "Il Tuo Profilo di Competenze con PoRTA",
       clickToZoom: "(Clicca per ingrandire)",
