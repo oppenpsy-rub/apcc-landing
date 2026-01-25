@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useLanguage } from '../LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import PortaLogo from './PortaLogo';
 
 const Header = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,14 +23,18 @@ const Header = ({ onOpenBooking }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <a 
-          href="https://www.romanistik.rub.de" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className={`text-sm sm:text-lg md:text-xl font-bold tracking-tight hover:opacity-80 transition-opacity ${isScrolled ? 'text-rub-blue' : 'text-white'}`}
-        >
-          RUB <span className="font-normal">| {t('header.title')}</span>
-        </a>
+        <div className="flex items-center gap-3 md:gap-4">
+          <PortaLogo size="sm" isDark={isScrolled} />
+          <div className="h-6 w-px bg-white/20" style={{ backgroundColor: isScrolled ? '#ddd' : 'rgba(255,255,255,0.2)' }}></div>
+          <a 
+            href="https://www.romanistik.rub.de" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`text-xs sm:text-sm md:text-base font-bold tracking-tight hover:opacity-80 transition-opacity ${isScrolled ? 'text-rub-blue' : 'text-white'}`}
+          >
+            RUB <span className="font-normal">| {t('header.title')}</span>
+          </a>
+        </div>
         
         <div className="flex items-center gap-2 md:gap-4">
           <LanguageSwitcher isScrolled={isScrolled} />
