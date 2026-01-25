@@ -30,15 +30,15 @@ export const translations = {
       quote: "\"Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg.\""
     },
     realityCheck: {
-      badge: "Reality Check: Warum PoRTA für M.Ed.-Studierende?",
-      title: "Lehrkräftebedarfsprognose NRW:",
-      titleHighlight: "Bereite dich vor.",
-      text1: "Die aktuellen Prognosen für NRW zeigen: Während MINT-Fächer gesucht werden, sinken die Einstellungschancen für Französisch, Spanisch und Italienisch.",
-      text2: "Setze nicht alles auf eine Karte. Mit dem PoRTA-Zertifikat sicherst du dich ab. Du erwirbst eine wertvolle Doppelqualifikation für die freie Wirtschaft – falls es mit dem Referendariat nicht sofort klappt oder du später wechseln möchtest.",
+      badge: "Doppelqualifikation für M.Ed.-Studierende",
+      title: "PoRTA + M.Ed.:",
+      titleHighlight: "Das Beste aus beiden Welten.",
+      text1: "Als angehende Lehrkraft mit Romanistik-Hintergrund bringst du bereits wertvolle Kompetenzen mit: Sprachvermittlung, Kulturverständnis und didaktische Expertise.",
+      text2: "Mit dem PoRTA-Zertifikat erweiterst du dein Profil strategisch. Du kombinierst pädagogische Kompetenz mit Wirtschafts-Know-how – eine gefragte Kombination, die dir vielfältige Karrierewege eröffnet.",
       list: [
-        "Plan B in der Tasche: Direkter Einstieg in Unternehmen möglich.",
-        "Auch als Lehrkraft profitierst du: Schulmanagement und Projektkoordination erfordern genau diese Wirtschaftskompetenzen.",
-        "Zusatzqualifikation: Hebe dich von anderen Bewerber:innen ab."
+        "Breites Kompetenzprofil: Pädagogik + Wirtschaft = einzigartiges Alleinstellungsmerkmal.",
+        "Wertvolle Skills auch im Schuldienst: Schulmanagement, Projektkoordination und internationale Schulpartnerschaften profitieren von deiner Wirtschaftskompetenz.",
+        "Maximale Flexibilität: Du qualifizierst dich für Schule UND Wirtschaft – und kannst später frei wählen."
       ],
       chartTitle: "Einstellungschancen Prognose 2030+",
       clickToZoom: "(Klicken zum Vergrößern)",
@@ -93,7 +93,7 @@ export const translations = {
           title: "Absolvent (M.A. Romanistik Französisch)"
         },
         {
-          quote: "Referendariat bestanden, aber keine Planstelle bekommen – das ist leider Realität. Statt auf eine Stelle zu warten, studiere ich jetzt das PoRTA-Zertifikat oben drauf. Es ist meine Brücke in die Wirtschaft: Zu meinen didaktischen Skills hole ich mir jetzt das Management-Wissen.",
+          quote: "Während meines Referendariats habe ich gemerkt, wie wertvoll Zusatzqualifikationen sind. Mit PoRTA erweitere ich jetzt mein Kompetenzprofil: Ich kann als Lehrkraft in internationalen Schulprojekten glänzen oder alternativ auch in der Wirtschaft durchstarten. Diese Flexibilität ist Gold wert.",
           title: "Absolvent (2. Staatsexamen) & PoRTA-Teilnehmer"
         }
       ]
@@ -112,7 +112,7 @@ export const translations = {
         },
         {
           q: "Für wen ist PoRTA geeignet?",
-          a: "Für alle Romanist:innen, die mehr Optionen als nur Schule wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als Plan B-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
+          a: "Für alle Romanist:innen, die ihre Karriereoptionen erweitern möchten. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt für Lehramtsstudierende (M.Ed.), die eine wertvolle Doppelqualifikation anstreben und sich für vielfältige Karrierewege qualifizieren wollen."
         },
         {
           q: "Muss ich die Prüfungsordnung wechseln?",
@@ -196,15 +196,15 @@ export const translations = {
       quote: "\"Cultural competence is the key to global success.\""
     },
     realityCheck: {
-      badge: "Reality Check: Why PoRTA for M.Ed. students?",
-      title: "Teacher Demand Forecast NRW:",
-      titleHighlight: "Be prepared.",
-      text1: "Current forecasts for NRW show: While STEM subjects are in demand, hiring chances for French, Spanish, and Italian are decreasing.",
-      text2: "Don't put all your eggs in one basket. With the PoRTA certificate, you secure yourself. You acquire a valuable double qualification for the private sector – in case the traineeship doesn't work out immediately or you want to switch later.",
+      badge: "Double Qualification for M.Ed. Students",
+      title: "PoRTA + M.Ed.:",
+      titleHighlight: "The Best of Both Worlds.",
+      text1: "As a prospective teacher with a Romance studies background, you already bring valuable skills: language teaching, cultural understanding, and didactic expertise.",
+      text2: "With the PoRTA certificate, you strategically expand your profile. You combine pedagogical competence with business know-how – a sought-after combination that opens up diverse career paths.",
       list: [
-        "Plan B in your pocket: Direct entry into companies possible.",
-        "You also benefit as a teacher: School management and project coordination require exactly these business skills.",
-        "Additional qualification: Stand out from other applicants."
+        "Broad competence profile: Pedagogy + Business = unique selling point.",
+        "Valuable skills also in school service: School management, project coordination, and international school partnerships benefit from your business competence.",
+        "Maximum flexibility: You qualify for school AND business – and can choose freely later."
       ],
       chartTitle: "Hiring Chances Forecast 2030+",
       clickToZoom: "(Click to zoom)",
@@ -259,7 +259,7 @@ export const translations = {
           title: "Graduate (M.A. Romance Studies French)"
         },
         {
-          quote: "Passed the traineeship but didn't get a permanent position – that's unfortunately reality. Instead of waiting for a job, I'm now studying the PoRTA certificate on top. It's my bridge to the economy: In addition to my didactic skills, I'm now getting management knowledge.",
+          quote: "During my traineeship, I realized how valuable additional qualifications are. With PoRTA, I'm now expanding my competence profile: I can excel as a teacher in international school projects or alternatively start a career in business. This flexibility is invaluable.",
           title: "Graduate (2nd State Exam) & PoRTA Participant"
         }
       ]
@@ -278,7 +278,7 @@ export const translations = {
         },
         {
           q: "Who is PoRTA suitable for?",
-          a: "For all Romance scholars who want more options than just school. Ideal for 1-subject students aiming for business/culture, but also perfect as a Plan B qualification for teaching students (M.Ed.) who want to broaden their career opportunities."
+          a: "For all Romance scholars who want to expand their career options. Ideal for 1-subject students aiming for business/culture, and also perfect for teaching students (M.Ed.) who want to pursue a valuable double qualification and qualify for diverse career paths."
         },
         {
           q: "Do I have to change the examination regulations?",
@@ -359,15 +359,15 @@ export const translations = {
       quote: "\"La compétence culturelle est la clé du succès mondial.\""
     },
     realityCheck: {
-      badge: "Reality Check : Pourquoi PoRTA pour les étudiants M.Ed. ?",
-      title: "Prévision des besoins en enseignants NRW :",
-      titleHighlight: "Préparez-vous.",
-      text1: "Les prévisions actuelles pour la NRW montrent : Alors que les matières STEM sont demandées, les chances d'embauche pour le français, l'espagnol et l'italien diminuent.",
-      text2: "Ne mettez pas tous vos œufs dans le même panier. Avec le certificat PoRTA, vous vous sécurisez. Vous acquérez une double qualification précieuse pour le secteur privé – au cas où le stage ne fonctionnerait pas immédiatement ou si vous souhaitez changer plus tard.",
+      badge: "Double Qualification pour Étudiants M.Ed.",
+      title: "PoRTA + M.Ed. :",
+      titleHighlight: "Le Meilleur des Deux Mondes.",
+      text1: "En tant que futur enseignant avec une formation en études romanes, vous apportez déjà des compétences précieuses : enseignement des langues, compréhension culturelle et expertise didactique.",
+      text2: "Avec le certificat PoRTA, vous élargissez stratégiquement votre profil. Vous combinez compétence pédagogique et savoir-faire commercial – une combinaison recherchée qui ouvre des parcours professionnels diversifiés.",
       list: [
-        "Plan B en poche : Entrée directe en entreprise possible.",
-        "Vous en profitez aussi en tant qu'enseignant : La gestion scolaire et la coordination de projets nécessitent exactement ces compétences commerciales.",
-        "Qualification supplémentaire : Démarquez-vous des autres candidats."
+        "Profil de compétences large : Pédagogie + Business = argument unique.",
+        "Compétences précieuses aussi dans l'enseignement : Gestion scolaire, coordination de projets et partenariats scolaires internationaux bénéficient de votre compétence commerciale.",
+        "Flexibilité maximale : Vous vous qualifiez pour l'école ET l'entreprise – et pouvez choisir librement plus tard."
       ],
       chartTitle: "Prévision des chances d'embauche 2030+",
       clickToZoom: "(Cliquer pour agrandir)",
@@ -422,7 +422,7 @@ export const translations = {
           title: "Diplômé (M.A. Études Romanes Français)"
         },
         {
-          quote: "Stage validé, mais pas de poste fixe – c'est malheureusement la réalité. Au lieu d'attendre un poste, j'étudie maintenant le certificat PoRTA en plus. C'est mon pont vers l'économie : En plus de mes compétences didactiques, j'acquiers maintenant des connaissances en gestion.",
+          quote: "Pendant mon stage, j'ai réalisé combien les qualifications supplémentaires sont précieuses. Avec PoRTA, j'élargis maintenant mon profil de compétences : je peux briller en tant qu'enseignant dans des projets scolaires internationaux ou alternativement faire carrière dans l'entreprise. Cette flexibilité est inestimable.",
           title: "Diplômé (2ème Examen d'État) & Participant PoRTA"
         }
       ]
@@ -441,7 +441,7 @@ export const translations = {
         },
         {
           q: "À qui s'adresse PoRTA ?",
-          a: "Pour tous les romanistes qui veulent plus d'options que l'école. Idéal pour les étudiants en 1 matière visant l'économie/la culture, mais aussi parfait comme qualification Plan B pour les étudiants en enseignement (M.Ed.) qui souhaitent élargir leurs opportunités professionnelles."
+          a: "Pour tous les romanistes qui souhaitent élargir leurs options de carrière. Idéal pour les étudiants en 1 matière visant l'économie/la culture, et aussi parfait pour les étudiants en enseignement (M.Ed.) qui souhaitent poursuivre une double qualification précieuse et se qualifier pour des parcours professionnels diversifiés."
         },
         {
           q: "Dois-je changer de règlement d'examen ?",
@@ -522,15 +522,15 @@ export const translations = {
       quote: "\"La competenza culturale è la chiave del successo globale.\""
     },
     realityCheck: {
-      badge: "Reality Check: Perché PoRTA per studenti M.Ed.?",
-      title: "Previsioni fabbisogno insegnanti NRW:",
-      titleHighlight: "Preparati.",
-      text1: "Le attuali previsioni per la NRW mostrano: Mentre le materie STEM sono richieste, le possibilità di assunzione per francese, spagnolo e italiano diminuiscono.",
-      text2: "Non puntare tutto su una sola carta. Con il certificato PoRTA ti assicuri. Acquisisci una preziosa doppia qualifica per il settore privato – nel caso in cui il tirocinio non funzioni immediatamente o tu voglia cambiare in seguito.",
+      badge: "Doppia Qualifica per Studenti M.Ed.",
+      title: "PoRTA + M.Ed.:",
+      titleHighlight: "Il Meglio di Due Mondi.",
+      text1: "Come futuro insegnante con formazione in studi romanzi, porti già competenze preziose: insegnamento linguistico, comprensione culturale ed esperienza didattica.",
+      text2: "Con il certificato PoRTA, espandi strategicamente il tuo profilo. Combini competenza pedagogica con know-how aziendale – una combinazione ricercata che apre percorsi professionali diversificati.",
       list: [
-        "Piano B in tasca: Ingresso diretto in azienda possibile.",
-        "Ne approfitti anche come insegnante: La gestione scolastica e il coordinamento progetti richiedono esattamente queste competenze aziendali.",
-        "Qualifica aggiuntiva: Distinguiti dagli altri candidati."
+        "Profilo di competenze ampio: Pedagogia + Business = punto di forza unico.",
+        "Competenze preziose anche nel servizio scolastico: Gestione scolastica, coordinamento progetti e partenariati scolastici internazionali beneficiano della tua competenza aziendale.",
+        "Massima flessibilità: Ti qualifichi per scuola E azienda – e puoi scegliere liberamente in seguito."
       ],
       chartTitle: "Previsioni possibilità di assunzione 2030+",
       clickToZoom: "(Clicca per ingrandire)",
@@ -585,7 +585,7 @@ export const translations = {
           title: "Laureato (M.A. Studi Romanzi Francese)"
         },
         {
-          quote: "Tirocinio superato, ma nessun posto fisso – questa è purtroppo la realtà. Invece di aspettare un posto, ora sto studiando il certificato PoRTA in aggiunta. È il mio ponte verso l'economia: Oltre alle mie competenze didattiche, ora acquisisco conoscenze manageriali.",
+          quote: "Durante il mio tirocinio, ho capito quanto siano preziose le qualifiche aggiuntive. Con PoRTA, ora espando il mio profilo di competenze: posso eccellere come insegnante in progetti scolastici internazionali o in alternativa fare carriera nell'economia. Questa flessibilità è impagabile.",
           title: "Laureato (2° Esame di Stato) & Partecipante PoRTA"
         }
       ]
@@ -604,7 +604,7 @@ export const translations = {
         },
         {
           q: "A chi è adatto PoRTA?",
-          a: "Per tutti i romanisti che vogliono più opzioni oltre alla scuola. Ideale per studenti a 1 materia che mirano all'economia/cultura, ma anche perfetto come qualifica Piano B per studenti di insegnamento (M.Ed.) che vogliono ampliare le loro opportunità professionali."
+          a: "Per tutti i romanisti che vogliono ampliare le loro opzioni di carriera. Ideale per studenti a 1 materia che mirano all'economia/cultura, e anche perfetto per studenti di insegnamento (M.Ed.) che vogliono perseguire una preziosa doppia qualifica e qualificarsi per percorsi professionali diversificati."
         },
         {
           q: "Devo cambiare regolamento d'esame?",
