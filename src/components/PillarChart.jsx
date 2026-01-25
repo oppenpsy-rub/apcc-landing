@@ -46,18 +46,28 @@ const PillarChart = ({ variant = '1fach' }) => {
                 transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
               >
                 {/* Pillar Header */}
-                <div className={`w-full ${colors.bg} text-white py-3 px-3 rounded-t-2xl border-4 ${colors.border}`}>
+                <div 
+                  className={`w-full text-white py-3 px-3 rounded-t-2xl border-4`}
+                  style={{
+                    backgroundColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
+                    borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10')
+                  }}
+                >
                   <h3 className="font-bold text-sm md:text-base text-center">
                     {pillar.data.label}
                   </h3>
-                  <p className="text-xs text-blue-100 text-center mt-1 font-semibold">
+                  <p className="text-xs text-white text-opacity-80 text-center mt-1 font-semibold">
                     {pillar.data.cp}
                   </p>
                 </div>
 
                 {/* Pillar Body - Modules */}
                 <motion.div
-                  className={`w-full border-l-4 border-r-4 border-b-4 ${colors.border} ${colors.light} p-3 md:p-4 flex-1 flex flex-col gap-2`}
+                  className={`w-full border-l-4 border-r-4 border-b-4 p-3 md:p-4 flex-1 flex flex-col gap-2`}
+                  style={{
+                    borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
+                    backgroundColor: colors.hex ? '#f5f5f0' : (pillar.id === 'pillar1' ? '#eff6ff' : '#f7fce4')
+                  }}
                 >
                   {pillar.data.modules.map((module, idx) => (
                     <motion.button
@@ -66,7 +76,10 @@ const PillarChart = ({ variant = '1fach' }) => {
                         setSelectedModule(module);
                         setSelectedPillarId(pillar.id);
                       }}
-                      className={`w-full p-2 rounded-lg text-xs md:text-sm font-semibold text-center transition-all cursor-pointer border-2 border-transparent ${colors.bg} text-white hover:shadow-lg hover:scale-105 active:scale-95`}
+                      className={`w-full p-2 rounded-lg text-xs md:text-sm font-semibold text-center transition-all cursor-pointer border-2 border-transparent text-white hover:shadow-lg hover:scale-105 active:scale-95`}
+                      style={{
+                        backgroundColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10')
+                      }}
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -77,7 +90,14 @@ const PillarChart = ({ variant = '1fach' }) => {
                 </motion.div>
 
                 {/* Pillar Footer - Info */}
-                <div className={`w-full text-xs text-gray-600 text-center p-2 bg-gray-100 rounded-b-lg border-4 border-t-0 ${colors.border}`}>
+                <div 
+                  className={`w-full text-xs text-center p-2 rounded-b-lg border-4 border-t-0`}
+                  style={{
+                    borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
+                    backgroundColor: '#f8f8f8',
+                    color: '#666'
+                  }}
+                >
                   <p className="font-semibold">{pillar.data.info}</p>
                 </div>
               </motion.div>
@@ -107,7 +127,12 @@ const PillarChart = ({ variant = '1fach' }) => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className={`sticky top-0 ${pillarColors[selectedPillarId].bg} text-white p-6 border-b flex justify-between items-start`}>
+              <div 
+                className="sticky top-0 text-white p-6 border-b flex justify-between items-start"
+                style={{
+                  backgroundColor: pillarColors[selectedPillarId].hex || (selectedPillarId === 'pillar1' ? '#17365c' : selectedPillarId === 'pillar2' ? '#8dae10' : '#527236')
+                }}
+              >
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold">{selectedModule.name}</h2>
                   <p className="text-white text-opacity-90 mt-2 text-sm md:text-base">
