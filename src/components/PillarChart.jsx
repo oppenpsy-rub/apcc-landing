@@ -6,6 +6,7 @@ import { X } from 'lucide-react';
 const PillarChart = ({ variant = '1fach' }) => {
   const { t } = useLanguage();
   const [selectedModule, setSelectedModule] = useState(null);
+  const [selectedPillarId, setSelectedPillarId] = useState(null);
 
   const pillars = [
     {
@@ -61,7 +62,10 @@ const PillarChart = ({ variant = '1fach' }) => {
                   {pillar.data.modules.map((module, idx) => (
                     <motion.button
                       key={module.id}
-                      onClick={() => setSelectedModule(module)}
+                      onClick={() => {
+                        setSelectedModule(module);
+                        setSelectedPillarId(pillar.id);
+                      }}
                       className={`w-full p-2 rounded-lg text-xs md:text-sm font-semibold text-center transition-all cursor-pointer border-2 border-transparent ${colors.bg} text-white hover:shadow-lg hover:scale-105 active:scale-95`}
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
@@ -84,13 +88,16 @@ const PillarChart = ({ variant = '1fach' }) => {
 
       {/* Module Modal */}
       <AnimatePresence>
-        {selectedModule && (
+        {selectedModule && selectedPillarId && (
           <motion.div
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedModule(null)}
+            onClick={() => {
+              setSelectedModule(null);
+              setSelectedPillarId(null);
+            }}
           >
             <motion.div
               className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
@@ -100,20 +107,23 @@ const PillarChart = ({ variant = '1fach' }) => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-rub-blue text-white p-6 border-b flex justify-between items-start">
+              <div className={`sticky top-0 ${pillarColors[selectedPillarId].bg} text-white p-6 border-b flex justify-between items-start`}>
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold">{selectedModule.name}</h2>
-                  <p className="text-blue-100 mt-2 text-sm md:text-base">
+                  <p className="text-white text-opacity-90 mt-2 text-sm md:text-base">
                     {selectedModule.type} • {selectedModule.cp}
                   </p>
                   {selectedModule.duration && (
-                    <p className="text-blue-100 text-sm">
+                    <p className="text-white text-opacity-90 text-sm">
                       Dauer: {selectedModule.duration}
                     </p>
                   )}
                 </div>
                 <button
-                  onClick={() => setSelectedModule(null)}
+                  onClick={() => {
+                    setSelectedModule(null);
+                    setSelectedPillarId(null);
+                  }}
                   className="text-white hover:bg-white hover:bg-opacity-20 p-2 rounded-lg transition"
                 >
                   <X size={24} />
@@ -139,7 +149,7 @@ const PillarChart = ({ variant = '1fach' }) => {
                     <ul className="space-y-2">
                       {selectedModule.courses.map((course, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-rub-green font-bold mt-1">✓</span>
+                          <span className={`${pillarColors[selectedPillarId].bg} text-white font-bold mt-1 rounded-full w-5 h-5 flex items-center justify-center text-sm`}>✓</span>
                           <span className="text-gray-700">{course}</span>
                         </li>
                       ))}
@@ -154,7 +164,7 @@ const PillarChart = ({ variant = '1fach' }) => {
                     <ul className="space-y-2">
                       {selectedModule.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-rub-green font-bold mt-1">✓</span>
+                          <span className={`${pillarColors[selectedPillarId].bg} text-white font-bold mt-1 rounded-full w-5 h-5 flex items-center justify-center text-sm`}>✓</span>
                           <span className="text-gray-700">{req}</span>
                         </li>
                       ))}
@@ -163,9 +173,9 @@ const PillarChart = ({ variant = '1fach' }) => {
                 )}
 
                 {/* CP Info */}
-                <div className="bg-blue-50 border-2 border-rub-blue rounded-lg p-4">
+                <div className={`${pillarColors[selectedPillarId].light} border-2 ${pillarColors[selectedPillarId].border} rounded-lg p-4`}>
                   <p className="text-sm text-gray-700">
-                    <span className="font-bold text-rub-blue">Credit Points: </span>
+                    <span className={`font-bold ${pillarColors[selectedPillarId].bg === 'bg-rub-blue' ? 'text-rub-blue' : pillarColors[selectedPillarId].bg === 'bg-rub-green' ? 'text-rub-green' : 'text-amber-600'}`}>Credit Points: </span>
                     {selectedModule.cp}
                   </p>
                 </div>
@@ -174,8 +184,11 @@ const PillarChart = ({ variant = '1fach' }) => {
               {/* Modal Footer */}
               <div className="bg-gray-50 px-6 py-4 rounded-b-2xl border-t">
                 <button
-                  onClick={() => setSelectedModule(null)}
-                  className="w-full bg-rub-blue text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition"
+                  onClick={() => {
+                    setSelectedModule(null);
+                    setSelectedPillarId(null);
+                  }}
+                  className={`w-full ${pillarColors[selectedPillarId].bg} text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition`}
                 >
                   Schließen
                 </button>
