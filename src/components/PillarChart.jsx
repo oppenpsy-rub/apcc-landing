@@ -33,7 +33,7 @@ const PillarChart = ({ variant = '1fach' }) => {
     <>
       <div className="flex flex-col items-center gap-8 py-8 w-full">
         {/* Main Pillar Container */}
-        <div className="flex items-stretch justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto" style={{ height: '450px' }}>
+        <div className="flex items-start justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto">
           {pillars.map((pillar, index) => {
             const colors = pillarColors[pillar.id];
 
