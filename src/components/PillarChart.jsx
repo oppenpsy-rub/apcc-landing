@@ -11,75 +11,78 @@ const PillarChart = ({ variant = '1fach' }) => {
       id: 'culture',
       label: t('integration.pillars.culture.label'),
       description: t('integration.pillars.culture.description'),
-      color: 'from-blue-600 to-blue-500',
-      height: variant === '1fach' ? 'h-48' : 'h-52',
-      accentColor: 'text-blue-600'
+      bgColor: 'bg-blue-500',
+      borderColor: 'border-blue-600',
+      height: variant === '1fach' ? '280px' : '320px',
+      order: 1
     },
     {
       id: 'romanistik',
       label: t('integration.pillars.romanistik.label'),
       description: t('integration.pillars.romanistik.description'),
-      color: 'from-rub-green to-green-500',
-      height: variant === '1fach' ? 'h-56' : 'h-64',
-      accentColor: 'text-rub-green'
+      bgColor: 'bg-rub-green',
+      borderColor: 'border-rub-green',
+      height: variant === '1fach' ? '360px' : '400px',
+      order: 2
     },
     {
       id: 'praxis',
       label: t('integration.pillars.praxis.label'),
       description: t('integration.pillars.praxis.description'),
-      color: 'from-orange-600 to-orange-500',
-      height: variant === '1fach' ? 'h-44' : 'h-48',
-      accentColor: 'text-orange-600'
+      bgColor: 'bg-amber-600',
+      borderColor: 'border-amber-700',
+      height: variant === '1fach' ? '240px' : '280px',
+      order: 3
     }
   ];
 
   return (
-    <div className="flex flex-col items-center gap-8 py-8">
-      {/* Pillar Container */}
-      <div className="flex items-end justify-center gap-4 md:gap-6 h-80 w-full">
+    <div className="flex flex-col items-center gap-8 py-8 w-full">
+      {/* Main Pillar Container */}
+      <div className="flex items-end justify-center gap-2 md:gap-4 w-full h-96">
         {pillars.map((pillar, index) => (
           <motion.div
             key={pillar.id}
-            className="flex flex-col items-center flex-1 max-w-xs cursor-pointer"
+            className="flex flex-col items-center flex-1 max-w-sm h-full"
             onMouseEnter={() => setActiveHover(pillar.id)}
             onMouseLeave={() => setActiveHover(null)}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 10 }}
           >
-            {/* Pillar Bar */}
+            {/* Pillar */}
             <motion.div
-              className={`w-full ${pillar.height} bg-gradient-to-t ${pillar.color} rounded-t-lg shadow-lg transition-all duration-300 relative group`}
-              initial={{ height: 0, opacity: 0 }}
+              className={`w-full ${pillar.bgColor} rounded-t-2xl shadow-xl border-4 ${pillar.borderColor} border-b-8 flex flex-col items-center justify-between p-4 relative transition-all duration-300 cursor-pointer`}
+              style={{ height: pillar.height }}
+              initial={{ scaleY: 0, opacity: 0 }}
               animate={{ 
-                height: 'auto', 
+                scaleY: 1, 
                 opacity: 1,
                 boxShadow: activeHover === pillar.id 
-                  ? '0 20px 40px rgba(0, 0, 0, 0.2)' 
-                  : '0 10px 20px rgba(0, 0, 0, 0.1)'
+                  ? '0 30px 60px rgba(0, 0, 0, 0.3)' 
+                  : '0 15px 35px rgba(0, 0, 0, 0.15)'
               }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              transition={{ delay: index * 0.15, duration: 0.6, ease: 'easeOut' }}
             >
-              {/* Label on pillar */}
+              {/* Pillar Content */}
               <motion.div
-                className="absolute inset-0 flex items-center justify-center"
-                animate={{ 
+                className="text-center flex flex-col items-center justify-center flex-1"
+                animate={{
                   opacity: activeHover === pillar.id ? 0 : 1,
                   scale: activeHover === pillar.id ? 0.8 : 1
                 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-white font-bold text-center px-3 text-sm md:text-base leading-tight">
+                <h3 className="text-white font-bold text-sm md:text-lg leading-snug px-2">
                   {pillar.label}
-                </span>
+                </h3>
               </motion.div>
 
-              {/* Hover info */}
+              {/* Hover Overlay */}
               <motion.div
-                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80 rounded-t-lg p-3"
-                animate={{ 
+                className="absolute inset-0 bg-black bg-opacity-40 rounded-t-2xl flex items-center justify-center p-6"
+                animate={{
                   opacity: activeHover === pillar.id ? 1 : 0
                 }}
                 transition={{ duration: 0.2 }}
+                pointerEvents={activeHover === pillar.id ? 'auto' : 'none'}
               >
                 <p className="text-white text-xs md:text-sm text-center font-medium leading-snug">
                   {pillar.description}
@@ -87,28 +90,31 @@ const PillarChart = ({ variant = '1fach' }) => {
               </motion.div>
             </motion.div>
 
-            {/* Base */}
-            <div className="w-full h-3 bg-gray-200 rounded-b-lg"></div>
+            {/* Base/Foundation */}
+            <div className={`w-full h-2 ${pillar.bgColor} rounded-b-lg`}></div>
           </motion.div>
         ))}
       </div>
 
-      {/* Legend / Info Section */}
+      {/* Details Grid Below */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-8"
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
       >
         {pillars.map((pillar) => (
           <div
-            key={`legend-${pillar.id}`}
-            className="flex flex-col items-center text-center p-3 rounded-lg bg-gray-50 border border-gray-100 hover:border-gray-300 transition-colors"
+            key={`detail-${pillar.id}`}
+            className={`rounded-lg p-5 md:p-6 text-center border-2 ${pillar.borderColor} bg-opacity-5 ${pillar.bgColor} hover:shadow-md transition-all`}
           >
-            <div className={`w-4 h-4 rounded-full bg-gradient-to-br ${pillar.color} mb-2`}></div>
-            <h4 className={`font-semibold text-sm md:text-base ${pillar.accentColor}`}>
+            <div className={`w-3 h-3 rounded-full ${pillar.bgColor} mx-auto mb-3`}></div>
+            <h4 className="font-bold text-gray-800 text-sm md:text-base">
               {pillar.label}
             </h4>
+            <p className="text-gray-600 text-xs md:text-sm mt-2">
+              {pillar.description}
+            </p>
           </div>
         ))}
       </motion.div>
@@ -118,9 +124,9 @@ const PillarChart = ({ variant = '1fach' }) => {
         className="text-gray-500 text-xs md:text-sm text-center italic mt-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
       >
-        {variant === '1fach' 
+        💡 {variant === '1fach' 
           ? t('integration.pillars_hover1fach') 
           : t('integration.pillars_hover2fach')}
       </motion.p>
