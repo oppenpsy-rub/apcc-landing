@@ -72,21 +72,102 @@ export const translations = {
         }
       },
       pillars: {
-        culture: {
-          label: "Corporate Culture",
-          description: "Verstehe Unternehmensstrukturen, Organisationspsychologie und Unternehmenskultur."
+        pillar1: {
+          label: "Wirtschaft & Organisation",
+          cp: "15 CP",
+          info: "Wähle 1 Schwerpunktmodul (10 CP) + 1 Aufbaumodul (5 CP)",
+          modules: [
+            {
+              id: "hr",
+              name: "Human Ressourcen",
+              type: "Schwerpunkt oder Aufbau",
+              cp: "10 CP oder 5 CP",
+              description: "Verstehe Personalmanagement, Recruiting und Organisationsentwicklung in internationalen Kontexten.",
+              courses: [
+                "Seminar: HR in Multinational Companies",
+                "Vorlesung: Arbeitspsychologie & Unternehmenskultur",
+                "Praktikum: HR-Projektseminar"
+              ]
+            },
+            {
+              id: "management",
+              name: "Management",
+              type: "Schwerpunkt oder Aufbau",
+              cp: "10 CP oder 5 CP",
+              description: "Analysiere Unternehmensstrategien, Change Management und internationale Geschäftsmodelle.",
+              courses: [
+                "Seminar: Strategisches Management",
+                "Vorlesung: Organisationstheorie",
+                "Fallstudien: Business Cases aus Romandie & Italien"
+              ]
+            },
+            {
+              id: "pr",
+              name: "Public Relations",
+              type: "Schwerpunkt oder Aufbau",
+              cp: "10 CP oder 5 CP",
+              description: "Entwickle Kommunikationsstrategien für Unternehmensreputation und Stakeholder-Management.",
+              courses: [
+                "Seminar: Corporate Communications",
+                "Praxis-Workshop: PR-Kampagnen für internationale Märkte",
+                "Seminar: Krisenkommunikation"
+              ]
+            }
+          ]
         },
-        romanistik: {
+        pillar2: {
           label: "Angewandte Romanistik",
-          description: "Nutze deine Analysekompetenzen für Sprache, Kultur und interkulturelle Kommunikation."
+          cp: "10 CP",
+          info: "Beide Module sind Pflicht (je 5 CP)",
+          modules: [
+            {
+              id: "business-comm",
+              name: "Unternehmenskommunikation",
+              type: "Pflichtmodul",
+              cp: "5 CP",
+              description: "Analysiere Kommunikationsprozesse in Unternehmen: Corporate Storytelling, interne & externe Kommunikation, Diskurse in Geschäftsberichten.",
+              courses: [
+                "Seminar: Corporate Storytelling & Textanalyse",
+                "Seminar: Multimodale Unternehmenskommunikation"
+              ]
+            },
+            {
+              id: "intercultural-comm",
+              name: "Interkulturelle Kommunikation",
+              type: "Pflichtmodul",
+              cp: "5 CP",
+              description: "Verstehe kulturelle Unterschiede in Kommunikationsstilen, Verhandlungsführung und Geschäftsetikette in französisch- und italienischsprachigen Märkten.",
+              courses: [
+                "Seminar: Verhandlungsführung und kulturelle Pragmatik",
+                "Seminar: Kulturelle Codes in Business & Marketing"
+              ]
+            }
+          ]
         },
-        praxis: {
-          label: "Berufliche Praxis",
-          description: "Sammle echte Praxiserfahrung durch Praktika bei Unternehmen und Projekten."
+        pillar3: {
+          label: "Praxis",
+          cp: "15 CP",
+          info: "Unternehmenspraktikum mit Bericht",
+          modules: [
+            {
+              id: "internship",
+              name: "Unternehmenspraktikum",
+              type: "Pflicht",
+              cp: "15 CP",
+              duration: "8-12 Wochen",
+              description: "Absolviere ein bezahltes Praktikum in einem Unternehmen deiner Wahl. Die Praktikumsstelle muss einen Bezug zu deinem Romanistik-Studium haben (z.B. Französisch/Italienisch sprechende Märkte, interkulturelle Kommunikation). Du verfasst einen Praktikumsbericht, der in Forschungsmethoden evaluiert wird.",
+              requirements: [
+                "Dauer: 8-12 Wochen",
+                "Mindestens 4 Wochen volles Praktikum (ca. 160 Stunden)",
+                "Praktikumsbericht: 30-50 Seiten",
+                "Präsentation im Abschlussseminar"
+              ]
+            }
+          ]
         }
       },
-      pillars_hover1fach: "Hover über die Säulen für Details – ohne Extra-CP!",
-      pillars_hover2fach: "Hover über die Säulen für Details – als wertvolle Zusatzqualifikation!",
+      pillars_hover1fach: "Klicke auf ein Modul für Details",
+      pillars_hover2fach: "Klicke auf ein Modul für Details",
       clickToZoom: "(Klicken zum Vergrößern)"
     },
     partners: {
