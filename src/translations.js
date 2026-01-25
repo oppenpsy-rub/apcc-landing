@@ -79,7 +79,7 @@ export const translations = {
           modules: [
             {
               id: "hr",
-              name: "Human Ressourcen",
+              name: "Human Resources",
               type: "Schwerpunkt oder Aufbau",
               cp: "10 CP oder 5 CP",
               description: "Verstehe Personalmanagement, Recruiting und Organisationsentwicklung in internationalen Kontexten.",
