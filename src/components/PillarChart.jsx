@@ -26,7 +26,7 @@ const PillarChart = ({ variant = '1fach' }) => {
   const pillarColors = {
     pillar1: { bg: 'bg-rub-blue', border: 'border-rub-blue', light: 'bg-blue-50' },
     pillar2: { bg: 'bg-rub-green', border: 'border-rub-green', light: 'bg-green-50' },
-    pillar3: { bg: 'bg-amber-600', border: 'border-amber-700', light: 'bg-amber-50' }
+    pillar3: { bg: 'bg-stone-700', border: 'border-stone-800', light: 'bg-stone-100', hex: '#8c8751' }
   };
 
   return (
@@ -175,7 +175,7 @@ const PillarChart = ({ variant = '1fach' }) => {
                 {/* CP Info */}
                 <div className={`${pillarColors[selectedPillarId].light} border-2 ${pillarColors[selectedPillarId].border} rounded-lg p-4`}>
                   <p className="text-sm text-gray-700">
-                    <span className={`font-bold ${pillarColors[selectedPillarId].bg === 'bg-rub-blue' ? 'text-rub-blue' : pillarColors[selectedPillarId].bg === 'bg-rub-green' ? 'text-rub-green' : 'text-amber-600'}`}>Credit Points: </span>
+                    <span style={{ color: pillarColors[selectedPillarId].hex || (pillarColors[selectedPillarId].bg === 'bg-rub-blue' ? '#17365c' : '#8dae10') }} className="font-bold">Credit Points: </span>
                     {selectedModule.cp}
                   </p>
                 </div>
