@@ -33,7 +33,7 @@ const PillarChart = ({ variant = '1fach' }) => {
     <>
       <div className="flex flex-col items-center gap-8 py-8 w-full">
         {/* Main Pillar Container */}
-        <div className="flex items-start justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto">
+        <div className="flex items-stretch justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto" style={{ minHeight: '400px' }}>
           {pillars.map((pillar, index) => {
             const colors = pillarColors[pillar.id];
 
@@ -77,15 +77,17 @@ const PillarChart = ({ variant = '1fach' }) => {
                         setSelectedModule(module);
                         setSelectedPillarId(pillar.id);
                       }}
-                      className={`w-full p-2 rounded-lg text-xs md:text-sm font-semibold text-center transition-all cursor-pointer border-2 border-transparent text-white hover:shadow-lg hover:scale-105 active:scale-95`}
+                      className={`w-full flex-1 rounded-lg text-xs md:text-sm font-semibold text-center transition-all cursor-pointer border-2 border-transparent text-white hover:shadow-lg hover:scale-105 active:scale-95 flex items-center justify-center p-2`}
                       style={{
                         backgroundColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10')
                       }}
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      {module.name}
-                      {module.cp && <div className="text-xs font-normal opacity-90">{module.cp}</div>}
+                      <div className="flex flex-col items-center gap-1">
+                        <span>{module.name}</span>
+                        {module.cp && <span className="text-xs font-normal opacity-90">{module.cp}</span>}
+                      </div>
                     </motion.button>
                   ))}
                 </motion.div>
