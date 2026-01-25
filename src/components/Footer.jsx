@@ -21,7 +21,7 @@ const Footer = ({ onOpenBooking }) => {
              </div>
              <div className="flex items-center gap-3 justify-center md:justify-start">
                <Mail size={20} className="text-rub-green" />
-               <a href="mailto:apcc@rub.de" className="hover:text-rub-green transition-colors">apcc@rub.de</a>
+               <a href="mailto:porta@rub.de" className="hover:text-rub-green transition-colors">porta@rub.de</a>
              </div>
           </div>
 

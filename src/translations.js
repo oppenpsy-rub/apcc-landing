@@ -14,7 +14,7 @@ export const translations = {
     },
     problemSolution: {
       title: "Schluss mit \"Was macht man damit?\"",
-      description: "Wer international erfolgreich sein will, muss mehr verstehen als nur die Sprache. Das APCC-Zertifikat macht dich zur kommunikativen Schnittstelle: Du verbindest dein Romanistik-Studium mit Einblicken in Unternehmensstrukturen und sammelst relevante Praxiserfahrung.",
+      description: "Wer international erfolgreich sein will, muss mehr verstehen als nur die Sprache. Das PoRTA-Zertifikat macht dich zur kommunikativen Schnittstelle: Du verbindest dein Romanistik-Studium mit Einblicken in Unternehmensstrukturen und sammelst relevante Praxiserfahrung.",
       benefit1: "Ohne Zeitverlust",
       benefit2: "Ohne PO-Wechsel"
     },
@@ -30,11 +30,11 @@ export const translations = {
       quote: "\"Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg.\""
     },
     realityCheck: {
-      badge: "Reality Check: Warum APCC für M.Ed.-Studierende?",
+      badge: "Reality Check: Warum PoRTA für M.Ed.-Studierende?",
       title: "Lehrkräftebedarfsprognose NRW:",
       titleHighlight: "Bereite dich vor.",
       text1: "Die aktuellen Prognosen für NRW zeigen: Während MINT-Fächer gesucht werden, sinken die Einstellungschancen für Französisch, Spanisch und Italienisch.",
-      text2: "Setze nicht alles auf eine Karte. Mit dem APCC-Zertifikat sicherst du dich ab. Du erwirbst eine wertvolle Doppelqualifikation für die freie Wirtschaft – falls es mit dem Referendariat nicht sofort klappt oder du später wechseln möchtest.",
+      text2: "Setze nicht alles auf eine Karte. Mit dem PoRTA-Zertifikat sicherst du dich ab. Du erwirbst eine wertvolle Doppelqualifikation für die freie Wirtschaft – falls es mit dem Referendariat nicht sofort klappt oder du später wechseln möchtest.",
       list: [
         "Plan B in der Tasche: Direkter Einstieg in Unternehmen möglich.",
         "Auch als Lehrkraft profitierst du: Schulmanagement und Projektkoordination erfordern genau diese Wirtschaftskompetenzen.",
@@ -85,16 +85,16 @@ export const translations = {
       title: "Was unsere Absolvent:innen sagen",
       items: [
         {
-          quote: "Dank APCC habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich im Marketing eines globalen Konzerns in Mailand.",
+          quote: "Dank PoRTA habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich im Marketing eines globalen Konzerns in Mailand.",
           title: "Absolventin (M.A. Romanistik Italienisch)"
         },
         {
-          quote: "Ich liebe die französische Sprache, aber ins Lehramt wollte ich nie. Das APCC-Profil war der Gamechanger: Mein Praktikum bei einem Logistik-Riesen in Paris war der direkte Türöffner in den Job.",
+          quote: "Ich liebe die französische Sprache, aber ins Lehramt wollte ich nie. Das PoRTA-Profil war der Gamechanger: Mein Praktikum bei einem Logistik-Riesen in Paris war der direkte Türöffner in den Job.",
           title: "Absolvent (M.A. Romanistik Französisch)"
         },
         {
-          quote: "Referendariat bestanden, aber keine Planstelle bekommen – das ist leider Realität. Statt auf eine Stelle zu warten, studiere ich jetzt das APCC-Zertifikat oben drauf. Es ist meine Brücke in die Wirtschaft: Zu meinen didaktischen Skills hole ich mir jetzt das Management-Wissen.",
-          title: "Absolvent (2. Staatsexamen) & APCC-Teilnehmer"
+          quote: "Referendariat bestanden, aber keine Planstelle bekommen – das ist leider Realität. Statt auf eine Stelle zu warten, studiere ich jetzt das PoRTA-Zertifikat oben drauf. Es ist meine Brücke in die Wirtschaft: Zu meinen didaktischen Skills hole ich mir jetzt das Management-Wissen.",
+          title: "Absolvent (2. Staatsexamen) & PoRTA-Teilnehmer"
         }
       ]
     },
@@ -111,7 +111,7 @@ export const translations = {
           a: "Seriöse Antwort: Nein – das kann keine Uni. Aber: Das Zertifikat löst das Hauptproblem von Geisteswissenschaftler:innen (fehlende Praxis). Du hast durch das Projektpraktikum oft schon den Fuß in der Tür und hebst dich durch BWL-Kenntnisse massiv von Mitbewerber:innen ab."
         },
         {
-          q: "Für wen ist APCC geeignet?",
+          q: "Für wen ist PoRTA geeignet?",
           a: "Für alle Romanist:innen, die mehr Optionen als nur Schule wollen. Ideal für 1-Fach-Studierende mit Ziel Wirtschaft/Kultur, aber auch perfekt als Plan B-Qualifikation für Lehramtsstudierende (M.Ed.), die ihre Berufschancen breiter aufstellen wollen."
         },
         {
@@ -125,9 +125,9 @@ export const translations = {
       ]
     },
     footer: {
-      apcc: "APCC",
-      subtitle: "Angewandte Philologie & Corporate Culture",
-      address: "APCC Koordinationsteam, GB 7/29",
+      apcc: "PoRTA",
+      subtitle: "Praxisorientierte Romanistik: Tor zur Arbeitswelt",
+      address: "PoRTA Koordinationsteam, GB 7/29",
       button: "Jetzt Beratungstermin buchen",
       copyright: "Ruhr-Universität Bochum. Alle Rechte vorbehalten.",
       impressum: "Impressum",
@@ -180,7 +180,7 @@ export const translations = {
     },
     problemSolution: {
       title: "No more \"What can you do with that?\"",
-      description: "Those who want to be successful internationally need to understand more than just the language. The APCC certificate makes you a communicative interface: You combine your Romance studies with insights into corporate structures and gain relevant practical experience.",
+      description: "Those who want to be successful internationally need to understand more than just the language. The PoRTA certificate makes you a communicative interface: You combine your Romance studies with insights into corporate structures and gain relevant practical experience.",
       benefit1: "No time loss",
       benefit2: "No change of exam regulations"
     },
@@ -196,11 +196,11 @@ export const translations = {
       quote: "\"Cultural competence is the key to global success.\""
     },
     realityCheck: {
-      badge: "Reality Check: Why APCC for M.Ed. students?",
+      badge: "Reality Check: Why PoRTA for M.Ed. students?",
       title: "Teacher Demand Forecast NRW:",
       titleHighlight: "Be prepared.",
       text1: "Current forecasts for NRW show: While STEM subjects are in demand, hiring chances for French, Spanish, and Italian are decreasing.",
-      text2: "Don't put all your eggs in one basket. With the APCC certificate, you secure yourself. You acquire a valuable double qualification for the private sector – in case the traineeship doesn't work out immediately or you want to switch later.",
+      text2: "Don't put all your eggs in one basket. With the PoRTA certificate, you secure yourself. You acquire a valuable double qualification for the private sector – in case the traineeship doesn't work out immediately or you want to switch later.",
       list: [
         "Plan B in your pocket: Direct entry into companies possible.",
         "You also benefit as a teacher: School management and project coordination require exactly these business skills.",
@@ -251,16 +251,16 @@ export const translations = {
       title: "What our graduates say",
       items: [
         {
-          quote: "Thanks to APCC, I not only read Dante but learned how to analyze Italian corporate culture. Today I work in marketing for a global corporation in Milan.",
+          quote: "Thanks to PoRTA, I not only read Dante but learned how to analyze Italian corporate culture. Today I work in marketing for a global corporation in Milan.",
           title: "Graduate (M.A. Romance Studies Italian)"
         },
         {
-          quote: "I love the French language, but I never wanted to go into teaching. The APCC profile was the game changer: My internship at a logistics giant in Paris was the direct door opener to the job.",
+          quote: "I love the French language, but I never wanted to go into teaching. The PoRTA profile was the game changer: My internship at a logistics giant in Paris was the direct door opener to the job.",
           title: "Graduate (M.A. Romance Studies French)"
         },
         {
-          quote: "Passed the traineeship but didn't get a permanent position – that's unfortunately reality. Instead of waiting for a job, I'm now studying the APCC certificate on top. It's my bridge to the economy: In addition to my didactic skills, I'm now getting management knowledge.",
-          title: "Graduate (2nd State Exam) & APCC Participant"
+          quote: "Passed the traineeship but didn't get a permanent position – that's unfortunately reality. Instead of waiting for a job, I'm now studying the PoRTA certificate on top. It's my bridge to the economy: In addition to my didactic skills, I'm now getting management knowledge.",
+          title: "Graduate (2nd State Exam) & PoRTA Participant"
         }
       ]
     },
@@ -277,7 +277,7 @@ export const translations = {
           a: "Serious answer: No – no university can do that. But: The certificate solves the main problem of humanities scholars (lack of practice). Through the project internship, you often already have your foot in the door and stand out massively from competitors through business administration knowledge."
         },
         {
-          q: "Who is APCC suitable for?",
+          q: "Who is PoRTA suitable for?",
           a: "For all Romance scholars who want more options than just school. Ideal for 1-subject students aiming for business/culture, but also perfect as a Plan B qualification for teaching students (M.Ed.) who want to broaden their career opportunities."
         },
         {
@@ -291,9 +291,9 @@ export const translations = {
       ]
     },
     footer: {
-      apcc: "APCC",
-      subtitle: "Applied Philology & Corporate Culture",
-      address: "APCC Coordination Team, GB 7/29",
+      apcc: "PoRTA",
+      subtitle: "Practice-oriented Romance Studies: Gateway to Work",
+      address: "PoRTA Coordination Team, GB 7/29",
       button: "Book Consultation Appointment Now",
       copyright: "Ruhr University Bochum. All rights reserved.",
       impressum: "Imprint",
@@ -343,7 +343,7 @@ export const translations = {
     },
     problemSolution: {
       title: "Fini le \"Qu'est-ce qu'on fait avec ça ?\"",
-      description: "Pour réussir à l'international, il faut comprendre plus que la langue. Le certificat APCC fait de vous une interface communicative : vous combinez vos études romanes avec des connaissances des structures d'entreprise et acquérez une expérience pratique pertinente.",
+      description: "Pour réussir à l'international, il faut comprendre plus que la langue. Le certificat PoRTA fait de vous une interface communicative : vous combinez vos études romanes avec des connaissances des structures d'entreprise et acquérez une expérience pratique pertinente.",
       benefit1: "Sans perte de temps",
       benefit2: "Sans changement de règlement"
     },
@@ -359,11 +359,11 @@ export const translations = {
       quote: "\"La compétence culturelle est la clé du succès mondial.\""
     },
     realityCheck: {
-      badge: "Reality Check : Pourquoi l'APCC pour les étudiants M.Ed. ?",
+      badge: "Reality Check : Pourquoi PoRTA pour les étudiants M.Ed. ?",
       title: "Prévision des besoins en enseignants NRW :",
       titleHighlight: "Préparez-vous.",
       text1: "Les prévisions actuelles pour la NRW montrent : Alors que les matières STEM sont demandées, les chances d'embauche pour le français, l'espagnol et l'italien diminuent.",
-      text2: "Ne mettez pas tous vos œufs dans le même panier. Avec le certificat APCC, vous vous sécurisez. Vous acquérez une double qualification précieuse pour le secteur privé – au cas où le stage ne fonctionnerait pas immédiatement ou si vous souhaitez changer plus tard.",
+      text2: "Ne mettez pas tous vos œufs dans le même panier. Avec le certificat PoRTA, vous vous sécurisez. Vous acquérez une double qualification précieuse pour le secteur privé – au cas où le stage ne fonctionnerait pas immédiatement ou si vous souhaitez changer plus tard.",
       list: [
         "Plan B en poche : Entrée directe en entreprise possible.",
         "Vous en profitez aussi en tant qu'enseignant : La gestion scolaire et la coordination de projets nécessitent exactement ces compétences commerciales.",
@@ -414,16 +414,16 @@ export const translations = {
       title: "Ce que disent nos diplômés",
       items: [
         {
-          quote: "Grâce à l'APCC, je n'ai pas seulement lu Dante, mais j'ai appris à analyser la culture d'entreprise italienne. Aujourd'hui, je travaille dans le marketing d'un groupe mondial à Milan.",
+          quote: "Grâce à PoRTA, je n'ai pas seulement lu Dante, mais j'ai appris à analyser la culture d'entreprise italienne. Aujourd'hui, je travaille dans le marketing d'un groupe mondial à Milan.",
           title: "Diplômée (M.A. Études Romanes Italien)"
         },
         {
-          quote: "J'aime la langue française, mais je n'ai jamais voulu enseigner. Le profil APCC a changé la donne : Mon stage chez un géant de la logistique à Paris a été l'ouvre-porte direct vers l'emploi.",
+          quote: "J'aime la langue française, mais je n'ai jamais voulu enseigner. Le profil PoRTA a changé la donne : Mon stage chez un géant de la logistique à Paris a été l'ouvre-porte direct vers l'emploi.",
           title: "Diplômé (M.A. Études Romanes Français)"
         },
         {
-          quote: "Stage validé, mais pas de poste fixe – c'est malheureusement la réalité. Au lieu d'attendre un poste, j'étudie maintenant le certificat APCC en plus. C'est mon pont vers l'économie : En plus de mes compétences didactiques, j'acquiers maintenant des connaissances en gestion.",
-          title: "Diplômé (2ème Examen d'État) & Participant APCC"
+          quote: "Stage validé, mais pas de poste fixe – c'est malheureusement la réalité. Au lieu d'attendre un poste, j'étudie maintenant le certificat PoRTA en plus. C'est mon pont vers l'économie : En plus de mes compétences didactiques, j'acquiers maintenant des connaissances en gestion.",
+          title: "Diplômé (2ème Examen d'État) & Participant PoRTA"
         }
       ]
     },
@@ -440,7 +440,7 @@ export const translations = {
           a: "Réponse sérieuse : Non – aucune université ne peut le faire. Mais : Le certificat résout le problème principal des chercheurs en sciences humaines (manque de pratique). Grâce au stage de projet, vous avez souvent déjà un pied dans la porte et vous vous démarquez massivement des concurrents grâce à vos connaissances en gestion d'entreprise."
         },
         {
-          q: "À qui s'adresse l'APCC ?",
+          q: "À qui s'adresse PoRTA ?",
           a: "Pour tous les romanistes qui veulent plus d'options que l'école. Idéal pour les étudiants en 1 matière visant l'économie/la culture, mais aussi parfait comme qualification Plan B pour les étudiants en enseignement (M.Ed.) qui souhaitent élargir leurs opportunités professionnelles."
         },
         {
@@ -454,9 +454,9 @@ export const translations = {
       ]
     },
     footer: {
-      apcc: "APCC",
-      subtitle: "Philologie Appliquée & Culture d'Entreprise",
-      address: "Équipe de Coordination APCC, GB 7/29",
+      apcc: "PoRTA",
+      subtitle: "Études Romanes Pratiques: Porte vers le Monde du Travail",
+      address: "Équipe de Coordination PoRTA, GB 7/29",
       button: "Réserver un rendez-vous maintenant",
       copyright: "Ruhr-Universität Bochum. Tous droits réservés.",
       impressum: "Mentions légales",
@@ -506,7 +506,7 @@ export const translations = {
     },
     problemSolution: {
       title: "Basta con \"Cosa ci fai con quello?\"",
-      description: "Chi vuole avere successo a livello internazionale deve capire più della sola lingua. Il certificato APCC ti rende un'interfaccia comunicativa: combini i tuoi studi romanzi con approfondimenti sulle strutture aziendali e acquisisci esperienza pratica rilevante.",
+      description: "Chi vuole avere successo a livello internazionale deve capire più della sola lingua. Il certificato PoRTA ti rende un'interfaccia comunicativa: combini i tuoi studi romanzi con approfondimenti sulle strutture aziendali e acquisisci esperienza pratica rilevante.",
       benefit1: "Senza perdita di tempo",
       benefit2: "Senza cambio di regolamento"
     },
@@ -522,11 +522,11 @@ export const translations = {
       quote: "\"La competenza culturale è la chiave del successo globale.\""
     },
     realityCheck: {
-      badge: "Reality Check: Perché APCC per studenti M.Ed.?",
+      badge: "Reality Check: Perché PoRTA per studenti M.Ed.?",
       title: "Previsioni fabbisogno insegnanti NRW:",
       titleHighlight: "Preparati.",
       text1: "Le attuali previsioni per la NRW mostrano: Mentre le materie STEM sono richieste, le possibilità di assunzione per francese, spagnolo e italiano diminuiscono.",
-      text2: "Non puntare tutto su una sola carta. Con il certificato APCC ti assicuri. Acquisisci una preziosa doppia qualifica per il settore privato – nel caso in cui il tirocinio non funzioni immediatamente o tu voglia cambiare in seguito.",
+      text2: "Non puntare tutto su una sola carta. Con il certificato PoRTA ti assicuri. Acquisisci una preziosa doppia qualifica per il settore privato – nel caso in cui il tirocinio non funzioni immediatamente o tu voglia cambiare in seguito.",
       list: [
         "Piano B in tasca: Ingresso diretto in azienda possibile.",
         "Ne approfitti anche come insegnante: La gestione scolastica e il coordinamento progetti richiedono esattamente queste competenze aziendali.",
@@ -577,16 +577,16 @@ export const translations = {
       title: "Cosa dicono i nostri laureati",
       items: [
         {
-          quote: "Grazie all'APCC, non ho solo letto Dante, ma ho imparato ad analizzare la cultura aziendale italiana. Oggi lavoro nel marketing di una multinazionale a Milano.",
+          quote: "Grazie a PoRTA, non ho solo letto Dante, ma ho imparato ad analizzare la cultura aziendale italiana. Oggi lavoro nel marketing di una multinazionale a Milano.",
           title: "Laureata (M.A. Studi Romanzi Italiano)"
         },
         {
-          quote: "Amo la lingua francese, ma non ho mai voluto insegnare. Il profilo APCC è stato la svolta: Il mio stage presso un gigante della logistica a Parigi è stato l'apripista diretto per il lavoro.",
+          quote: "Amo la lingua francese, ma non ho mai voluto insegnare. Il profilo PoRTA è stato la svolta: Il mio stage presso un gigante della logistica a Parigi è stato l'apripista diretto per il lavoro.",
           title: "Laureato (M.A. Studi Romanzi Francese)"
         },
         {
-          quote: "Tirocinio superato, ma nessun posto fisso – questa è purtroppo la realtà. Invece di aspettare un posto, ora sto studiando il certificato APCC in aggiunta. È il mio ponte verso l'economia: Oltre alle mie competenze didattiche, ora acquisisco conoscenze manageriali.",
-          title: "Laureato (2° Esame di Stato) & Partecipante APCC"
+          quote: "Tirocinio superato, ma nessun posto fisso – questa è purtroppo la realtà. Invece di aspettare un posto, ora sto studiando il certificato PoRTA in aggiunta. È il mio ponte verso l'economia: Oltre alle mie competenze didattiche, ora acquisisco conoscenze manageriali.",
+          title: "Laureato (2° Esame di Stato) & Partecipante PoRTA"
         }
       ]
     },
@@ -603,7 +603,7 @@ export const translations = {
           a: "Risposta seria: No – nessuna università può farlo. Ma: Il certificato risolve il problema principale degli studiosi di materie umanistiche (mancanza di pratica). Attraverso il tirocinio di progetto, spesso hai già un piede nella porta e ti distingui massicciamente dai concorrenti grazie alle conoscenze di economia aziendale."
         },
         {
-          q: "A chi è adatto l'APCC?",
+          q: "A chi è adatto PoRTA?",
           a: "Per tutti i romanisti che vogliono più opzioni oltre alla scuola. Ideale per studenti a 1 materia che mirano all'economia/cultura, ma anche perfetto come qualifica Piano B per studenti di insegnamento (M.Ed.) che vogliono ampliare le loro opportunità professionali."
         },
         {
@@ -617,9 +617,9 @@ export const translations = {
       ]
     },
     footer: {
-      apcc: "APCC",
-      subtitle: "Filologia Applicata & Cultura Aziendale",
-      address: "Team di Coordinamento APCC, GB 7/29",
+      apcc: "PoRTA",
+      subtitle: "Studi Romanzi Pratici: Porta verso il Mondo del Lavoro",
+      address: "Team di Coordinamento PoRTA, GB 7/29",
       button: "Prenota ora un appuntamento",
       copyright: "Ruhr-Universität Bochum. Tutti i diritti riservati.",
       impressum: "Note legali",
