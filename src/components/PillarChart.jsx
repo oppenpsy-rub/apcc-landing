@@ -26,7 +26,7 @@ const PillarChart = ({ variant = '1fach' }) => {
   const pillarColors = {
     pillar1: { bg: 'bg-rub-blue', border: 'border-rub-blue', light: 'bg-blue-50' },
     pillar2: { bg: 'bg-rub-green', border: 'border-rub-green', light: 'bg-green-50' },
-    pillar3: { bg: 'bg-stone-700', border: 'border-stone-800', light: 'bg-stone-100', hex: '#8c8751' }
+    pillar3: { bg: 'bg-stone-700', border: 'border-stone-800', light: 'bg-stone-100', hex: '#527236' }
   };
 
   return (
