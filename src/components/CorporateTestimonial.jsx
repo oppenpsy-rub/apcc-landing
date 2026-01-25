@@ -24,7 +24,7 @@ const CorporateTestimonial = () => {
           
           <div className="flex-1">
             <blockquote className="text-xl md:text-2xl font-medium text-gray-800 mb-6 italic leading-relaxed">
-              "{t('corporateTestimonial.quote')}"
+              {t('corporateTestimonial.quote')}
             </blockquote>
             
             <div className="border-t border-gray-200 pt-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
