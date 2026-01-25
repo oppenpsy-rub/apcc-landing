@@ -24,17 +24,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="flex justify-center mb-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
-            >
-              <Sparkles size={16} className="text-rub-green" />
-              <span className="text-white text-xs font-medium uppercase tracking-widest">{t('hero.badge')}</span>
-            </motion.div>
-          </div>
           <h1 className="text-5xl md:text-7xl font-bold font-serif mb-6 leading-tight drop-shadow-lg">
             {t('hero.titleLine1')} <br /> {t('hero.titleLine2')}
           </h1>
