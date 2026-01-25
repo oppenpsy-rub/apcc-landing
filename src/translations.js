@@ -27,7 +27,7 @@ export const translations = {
         { title: "Executive Assistant", description: "Die rechte Hand der Geschäftsführung im Frankreich/Italien-Geschäft." },
         { title: "Diversity & Culture", description: "Zusammenarbeit in multikulturellen Teams moderieren." }
       ],
-      quote: "\"Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg.\""
+      quote: "Kulturelle Kompetenz ist der Schlüssel zu globalem Erfolg."
     },
     realityCheck: {
       badge: "Doppelqualifikation für M.Ed.-Studierende",
@@ -193,7 +193,7 @@ export const translations = {
         { title: "Executive Assistant", description: "The right hand of management in France/Italy business." },
         { title: "Diversity & Culture", description: "Moderate collaboration in multicultural teams." }
       ],
-      quote: "\"Cultural competence is the key to global success.\""
+      quote: "Cultural competence is the key to global success."
     },
     realityCheck: {
       badge: "Double Qualification for M.Ed. Students",
@@ -356,7 +356,7 @@ export const translations = {
         { title: "Assistant(e) de Direction", description: "Le bras droit de la direction pour les affaires France/Italie." },
         { title: "Diversité & Culture", description: "Modérer la collaboration dans des équipes multiculturelles." }
       ],
-      quote: "\"La compétence culturelle est la clé du succès mondial.\""
+      quote: "La compétence culturelle est la clé du succès mondial."
     },
     realityCheck: {
       badge: "Double Qualification pour Étudiants M.Ed.",
@@ -519,7 +519,7 @@ export const translations = {
         { title: "Assistente Esecutivo", description: "Il braccio destro della direzione per gli affari Francia/Italia." },
         { title: "Diversità & Cultura", description: "Moderare la collaborazione in team multiculturali." }
       ],
-      quote: "\"La competenza culturale è la chiave del successo globale.\""
+      quote: "La competenza culturale è la chiave del successo globale."
     },
     realityCheck: {
       badge: "Doppia Qualifica per Studenti M.Ed.",
