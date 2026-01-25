@@ -30,8 +30,8 @@ const PillarChart = ({ variant = '1fach' }) => {
 
   const pillarHeights = {
     pillar1: variant === '1fach' ? '320px' : '360px',
-    pillar2: variant === '1fach' ? '280px' : '320px',
-    pillar3: variant === '1fach' ? '280px' : '320px'
+    pillar2: variant === '1fach' ? '320px' : '360px',
+    pillar3: variant === '1fach' ? '320px' : '360px'
   };
 
   return (
