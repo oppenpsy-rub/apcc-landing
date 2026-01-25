@@ -28,25 +28,18 @@ const PillarChart = ({ variant = '1fach' }) => {
     pillar3: { bg: 'bg-amber-600', border: 'border-amber-700', light: 'bg-amber-50' }
   };
 
-  const pillarHeights = {
-    pillar1: variant === '1fach' ? '320px' : '360px',
-    pillar2: variant === '1fach' ? '320px' : '360px',
-    pillar3: variant === '1fach' ? '320px' : '360px'
-  };
-
   return (
     <>
       <div className="flex flex-col items-center gap-8 py-8 w-full">
         {/* Main Pillar Container */}
-        <div className="flex items-end justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto" style={{ minHeight: '450px' }}>
+        <div className="flex items-stretch justify-center gap-2 md:gap-4 w-full max-w-4xl mx-auto" style={{ height: '450px' }}>
           {pillars.map((pillar, index) => {
             const colors = pillarColors[pillar.id];
-            const height = pillarHeights[pillar.id];
 
             return (
               <motion.div
                 key={pillar.id}
-                className="flex flex-col items-center flex-1"
+                className="flex flex-col flex-1"
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 1, opacity: 1 }}
                 transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
@@ -64,7 +57,6 @@ const PillarChart = ({ variant = '1fach' }) => {
                 {/* Pillar Body - Modules */}
                 <motion.div
                   className={`w-full border-l-4 border-r-4 border-b-4 ${colors.border} ${colors.light} p-3 md:p-4 flex-1 flex flex-col gap-2`}
-                  style={{ height: height }}
                 >
                   {pillar.data.modules.map((module, idx) => (
                     <motion.button
