@@ -47,16 +47,17 @@ const PillarChart = ({ variant = '1fach' }) => {
               >
                 {/* Pillar Header */}
                 <div 
-                  className={`w-full text-white py-3 px-3 rounded-t-2xl border-4`}
+                  className={`w-full text-white rounded-t-2xl border-4 flex flex-col items-center justify-center`}
                   style={{
                     backgroundColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
-                    borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10')
+                    borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
+                    height: '80px'
                   }}
                 >
-                  <h3 className="font-bold text-sm md:text-base text-center">
+                  <h3 className="font-bold text-sm md:text-base text-center leading-tight">
                     {pillar.data.label}
                   </h3>
-                  <p className="text-xs text-white text-opacity-80 text-center mt-1 font-semibold">
+                  <p className="text-xs text-white text-opacity-80 text-center font-semibold mt-1">
                     {pillar.data.cp}
                   </p>
                 </div>
@@ -91,14 +92,15 @@ const PillarChart = ({ variant = '1fach' }) => {
 
                 {/* Pillar Footer - Info */}
                 <div 
-                  className={`w-full text-xs text-center p-2 rounded-b-lg border-4 border-t-0`}
+                  className={`w-full text-xs text-center rounded-b-lg border-4 border-t-0 flex items-center justify-center`}
                   style={{
                     borderColor: colors.hex || (pillar.id === 'pillar1' ? '#17365c' : '#8dae10'),
                     backgroundColor: '#f8f8f8',
-                    color: '#666'
+                    color: '#666',
+                    height: '50px'
                   }}
                 >
-                  <p className="font-semibold">{pillar.data.info}</p>
+                  <p className="font-semibold px-2">{pillar.data.info}</p>
                 </div>
               </motion.div>
             );
