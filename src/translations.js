@@ -36,7 +36,7 @@ export const translations = {
       text1: "Als angehende Lehrkraft mit Romanistik-Hintergrund bringst du bereits wertvolle Kompetenzen mit: Sprachvermittlung, Kulturverständnis und didaktische Expertise.",
       text2: "Mit dem PoRTA-Zertifikat erweiterst du dein Profil strategisch. Du kombinierst pädagogische Kompetenz mit Wirtschafts-Know-how – eine gefragte Kombination, die dir vielfältige Karrierewege eröffnet.",
       list: [
-        "Breites Kompetenzprofil: Pädagogik + Wirtschaft = einzigartiges Alleinstellungsmerkmal.",
+        "Breites Kompetenzprofil: Pädagogik + Wirtschaft = starkes Alleinstellungsmerkmal.",
         "Wertvolle Skills auch im Schuldienst: Schulmanagement, Projektkoordination und internationale Schulpartnerschaften profitieren von deiner Wirtschaftskompetenz.",
         "Maximale Flexibilität: Du qualifizierst dich für Schule UND Wirtschaft – und kannst später frei wählen."
       ],
@@ -202,7 +202,7 @@ export const translations = {
       text1: "As a prospective teacher with a Romance studies background, you already bring valuable skills: language teaching, cultural understanding, and didactic expertise.",
       text2: "With the PoRTA certificate, you strategically expand your profile. You combine pedagogical competence with business know-how – a sought-after combination that opens up diverse career paths.",
       list: [
-        "Broad competence profile: Pedagogy + Business = unique selling point.",
+        "Broad competence profile: Pedagogy + Business = strong selling point.",
         "Valuable skills also in school service: School management, project coordination, and international school partnerships benefit from your business competence.",
         "Maximum flexibility: You qualify for school AND business – and can choose freely later."
       ],
@@ -365,7 +365,7 @@ export const translations = {
       text1: "En tant que futur enseignant avec une formation en études romanes, vous apportez déjà des compétences précieuses : enseignement des langues, compréhension culturelle et expertise didactique.",
       text2: "Avec le certificat PoRTA, vous élargissez stratégiquement votre profil. Vous combinez compétence pédagogique et savoir-faire commercial – une combinaison recherchée qui ouvre des parcours professionnels diversifiés.",
       list: [
-        "Profil de compétences large : Pédagogie + Business = argument unique.",
+        "Profil de compétences large : Pédagogie + Business = argument distinctif.",
         "Compétences précieuses aussi dans l'enseignement : Gestion scolaire, coordination de projets et partenariats scolaires internationaux bénéficient de votre compétence commerciale.",
         "Flexibilité maximale : Vous vous qualifiez pour l'école ET l'entreprise – et pouvez choisir librement plus tard."
       ],
@@ -528,7 +528,7 @@ export const translations = {
       text1: "Come futuro insegnante con formazione in studi romanzi, porti già competenze preziose: insegnamento linguistico, comprensione culturale ed esperienza didattica.",
       text2: "Con il certificato PoRTA, espandi strategicamente il tuo profilo. Combini competenza pedagogica con know-how aziendale – una combinazione ricercata che apre percorsi professionali diversificati.",
       list: [
-        "Profilo di competenze ampio: Pedagogia + Business = punto di forza unico.",
+        "Profilo di competenze ampio: Pedagogia + Business = forte punto di forza.",
         "Competenze preziose anche nel servizio scolastico: Gestione scolastica, coordinamento progetti e partenariati scolastici internazionali beneficiano della tua competenza aziendale.",
         "Massima flessibilità: Ti qualifichi per scuola E azienda – e puoi scegliere liberamente in seguito."
       ],
