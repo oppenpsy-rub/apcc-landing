@@ -108,11 +108,10 @@ const Testimonial = () => {
                 <Quote size={40} className="text-rub-green mb-6 opacity-50" />
                 
                 <p className="text-xl md:text-2xl text-white font-light leading-relaxed mb-8 italic">
-                  "{testimonials[currentIndex]?.quote}"
+                  {testimonials[currentIndex]?.quote}
                 </p>
                 
                 <div>
-                  <h4 className="text-lg font-bold text-white">{testimonials[currentIndex]?.name}</h4>
                   <p className="text-rub-green text-sm">{testimonials[currentIndex]?.title}</p>
                 </div>
               </div>

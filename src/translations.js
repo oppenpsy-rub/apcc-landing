@@ -86,15 +86,15 @@ export const translations = {
       items: [
         {
           quote: "Dank PoRTA habe ich nicht nur Dante gelesen, sondern gelernt, wie man italienische Unternehmenskultur analysiert. Heute arbeite ich im Marketing eines globalen Konzerns in Mailand.",
-          title: "Absolventin (M.A. Romanistik Italienisch)"
+          title: "Maire, Absolventin (M.A. Romanistik Italienisch)"
         },
         {
           quote: "Ich liebe die französische Sprache, aber ins Lehramt wollte ich nie. Das PoRTA-Profil war der Gamechanger: Mein Praktikum bei einem Logistik-Riesen in Paris war der direkte Türöffner in den Job.",
-          title: "Absolvent (M.A. Romanistik Französisch)"
+          title: "Jonas, Absolvent (M.A. Romanistik Französisch)"
         },
         {
           quote: "Während meines Referendariats habe ich gemerkt, wie wertvoll Zusatzqualifikationen sind. Mit PoRTA erweitere ich jetzt mein Kompetenzprofil: Ich kann als Lehrkraft in internationalen Schulprojekten glänzen oder alternativ auch in der Wirtschaft durchstarten. Diese Flexibilität ist Gold wert.",
-          title: "Absolvent (2. Staatsexamen) & PoRTA-Teilnehmer"
+          title: "Mario, Absolvent (2. Staatsexamen) & PoRTA-Teilnehmer"
         }
       ]
     },
@@ -252,15 +252,15 @@ export const translations = {
       items: [
         {
           quote: "Thanks to PoRTA, I not only read Dante but learned how to analyze Italian corporate culture. Today I work in marketing for a global corporation in Milan.",
-          title: "Graduate (M.A. Romance Studies Italian)"
+          title: "Maire, Graduate (M.A. Romance Studies Italian)"
         },
         {
           quote: "I love the French language, but I never wanted to go into teaching. The PoRTA profile was the game changer: My internship at a logistics giant in Paris was the direct door opener to the job.",
-          title: "Graduate (M.A. Romance Studies French)"
+          title: "Jonas, Graduate (M.A. Romance Studies French)"
         },
         {
           quote: "During my traineeship, I realized how valuable additional qualifications are. With PoRTA, I'm now expanding my competence profile: I can excel as a teacher in international school projects or alternatively start a career in business. This flexibility is invaluable.",
-          title: "Graduate (2nd State Exam) & PoRTA Participant"
+          title: "Mario, Graduate (2nd State Exam) & PoRTA Participant"
         }
       ]
     },
@@ -415,15 +415,15 @@ export const translations = {
       items: [
         {
           quote: "Grâce à PoRTA, je n'ai pas seulement lu Dante, mais j'ai appris à analyser la culture d'entreprise italienne. Aujourd'hui, je travaille dans le marketing d'un groupe mondial à Milan.",
-          title: "Diplômée (M.A. Études Romanes Italien)"
+          title: "Maire, Diplômée (M.A. Études Romanes Italien)"
         },
         {
           quote: "J'aime la langue française, mais je n'ai jamais voulu enseigner. Le profil PoRTA a changé la donne : Mon stage chez un géant de la logistique à Paris a été l'ouvre-porte direct vers l'emploi.",
-          title: "Diplômé (M.A. Études Romanes Français)"
+          title: "Jonas, Diplômé (M.A. Études Romanes Français)"
         },
         {
           quote: "Pendant mon stage, j'ai réalisé combien les qualifications supplémentaires sont précieuses. Avec PoRTA, j'élargis maintenant mon profil de compétences : je peux briller en tant qu'enseignant dans des projets scolaires internationaux ou alternativement faire carrière dans l'entreprise. Cette flexibilité est inestimable.",
-          title: "Diplômé (2ème Examen d'État) & Participant PoRTA"
+          title: "Mario, Diplômé (2ème Examen d'État) & Participant PoRTA"
         }
       ]
     },
@@ -578,15 +578,15 @@ export const translations = {
       items: [
         {
           quote: "Grazie a PoRTA, non ho solo letto Dante, ma ho imparato ad analizzare la cultura aziendale italiana. Oggi lavoro nel marketing di una multinazionale a Milano.",
-          title: "Laureata (M.A. Studi Romanzi Italiano)"
+          title: "Maire, Laureata (M.A. Studi Romanzi Italiano)"
         },
         {
           quote: "Amo la lingua francese, ma non ho mai voluto insegnare. Il profilo PoRTA è stato la svolta: Il mio stage presso un gigante della logistica a Parigi è stato l'apripista diretto per il lavoro.",
-          title: "Laureato (M.A. Studi Romanzi Francese)"
+          title: "Jonas, Laureato (M.A. Studi Romanzi Francese)"
         },
         {
           quote: "Durante il mio tirocinio, ho capito quanto siano preziose le qualifiche aggiuntive. Con PoRTA, ora espando il mio profilo di competenze: posso eccellere come insegnante in progetti scolastici internazionali o in alternativa fare carriera nell'economia. Questa flessibilità è impagabile.",
-          title: "Laureato (2° Esame di Stato) & Partecipante PoRTA"
+          title: "Mario, Laureato (2° Esame di Stato) & Partecipante PoRTA"
         }
       ]
     },
