@@ -59,7 +59,8 @@ export const translations = {
       title: "So passt es in dein Studium",
       tabs: {
         oneSubject: "1-Fach Master",
-        twoSubject: "2-Fach Master / M.Ed."
+        twoSubject: "2-Fach Master / M.Ed.",
+        bachelor: "Bachelor"
       },
       content: {
         oneSubject: {
@@ -322,7 +323,8 @@ export const translations = {
       title: "How it fits into your studies",
       tabs: {
         oneSubject: "1-Subject Master",
-        twoSubject: "2-Subject Master / M.Ed."
+        twoSubject: "2-Subject Master / M.Ed.",
+        bachelor: "Bachelor"
       },
       content: {
         oneSubject: {
@@ -501,7 +503,8 @@ export const translations = {
       title: "Comment cela s'intègre dans vos études",
       tabs: {
         oneSubject: "Master 1 matière",
-        twoSubject: "Master 2 matières / M.Ed."
+        twoSubject: "Master 2 matières / M.Ed.",
+        bachelor: "Bachelor"
       },
       content: {
         oneSubject: {
@@ -680,7 +683,8 @@ export const translations = {
       title: "Come si inserisce nei tuoi studi",
       tabs: {
         oneSubject: "Master 1 materia",
-        twoSubject: "Master 2 materie / M.Ed."
+        twoSubject: "Master 2 materie / M.Ed.",
+        bachelor: "Bachelor"
       },
       content: {
         oneSubject: {

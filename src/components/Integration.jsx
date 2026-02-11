@@ -10,7 +10,12 @@ const Integration = ({ onOpenLightbox }) => {
   const tabs = [
     { id: '1fach', label: t('integration.tabs.oneSubject') },
     { id: '2fach', label: t('integration.tabs.twoSubject') },
+    { id: 'bachelor', label: t('integration.tabs.bachelor') },
   ];
+
+  const isOneSubject = activeTab === '1fach';
+  const contentKey = isOneSubject ? 'oneSubject' : 'twoSubject';
+  const pillarVariant = isOneSubject ? '1fach' : '2fach';
 
   return (
     <section className="py-20 bg-rub-lightGray">
@@ -48,21 +53,12 @@ const Integration = ({ onOpenLightbox }) => {
               transition={{ duration: 0.3 }}
               className="w-full"
             >
-              {activeTab === '1fach' ? (
-                <div className="flex flex-col items-center gap-6">
-                  <p className="text-lg md:text-xl text-gray-700">
-                    <span className="font-bold text-rub-green">{t('integration.content.oneSubject.highlight')}</span> {t('integration.content.oneSubject.text')}
-                  </p>
-                  <PillarChart variant="1fach" />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center gap-6">
-                  <p className="text-lg md:text-xl text-gray-700">
-                    <span className="font-bold text-rub-green">{t('integration.content.twoSubject.highlight')}</span> {t('integration.content.twoSubject.text')}
-                  </p>
-                  <PillarChart variant="2fach" />
-                </div>
-              )}
+              <div className="flex flex-col items-center gap-6">
+                <p className="text-lg md:text-xl text-gray-700">
+                  <span className="font-bold text-rub-green">{t(`integration.content.${contentKey}.highlight`)}</span> {t(`integration.content.${contentKey}.text`)}
+                </p>
+                <PillarChart variant={pillarVariant} />
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
