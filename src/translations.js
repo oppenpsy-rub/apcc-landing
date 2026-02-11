@@ -116,7 +116,7 @@ export const translations = {
           ]
         },
         pillar2: {
-          label: "Angewandte Romanistik",
+          label: "Angewandte Linguistik",
           cp: "10 CP",
           info: "Beide Module sind Pflicht (je 5 CP)",
           modules: [
